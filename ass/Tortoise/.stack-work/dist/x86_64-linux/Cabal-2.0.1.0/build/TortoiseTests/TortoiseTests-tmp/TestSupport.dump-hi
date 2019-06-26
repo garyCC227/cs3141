@@ -1,0 +1,672 @@
+
+==================== FINAL INTERFACE ====================
+2019-06-24 05:34:28.937327 UTC
+
+interface main:TestSupport [orphan module] 8022
+  interface hash: baa2835c3fd30242403d8737986dafab
+  ABI hash: f4c71ec516300836e52e7e01d3beee46
+  export-list hash: e21cbe78c069ad3b8ae7923d340a6da2
+  orphan hash: df5f33220620b32f1b4a0690333ca2ec
+  flag hash: 61590a41f13c1de1f84f4cc69df78bbd
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  TestSupport.MoveTurnOnly{TestSupport.MoveTurnOnly}
+  TestSupport.NoPenControl{TestSupport.NoPenControl}
+module dependencies: Tortoise
+package dependencies: QuickCheck-2.10.1 array-0.5.2.0
+                      base-4.10.1.0* containers-0.5.10.2 deepseq-1.4.3.0
+                      ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 integer-gmp-1.0.1.0
+                      pretty-1.1.3.3 primitive-0.6.2.0 random-1.1
+                      template-haskell-2.12.0.0 tf-random-0.5 time-1.8.0.2
+                      transformers-0.5.2.0
+orphans: transformers-0.5.2.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0:Control.Monad.Primitive
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.10.1:Test.QuickCheck e7cc3bba148aa39b704c2b95e2084a35
+import  -/  QuickCheck-2.10.1:Test.QuickCheck.Arbitrary 163b49d50f1974012c75b48cc2898129
+import  -/  QuickCheck-2.10.1:Test.QuickCheck.Gen 20415c0ff6bb059b7cbac945820aef4e
+import  -/  base-4.10.1.0:Control.Applicative 99577a9c463ffe4790a1d37547a345bd
+import  -/  base-4.10.1.0:Data.Functor 2ffda4f936b8f474394d93205750aff3
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  Tortoise b1059e1036400af094eb900238a21641
+  exports: 17bb42b7abb4b8f657ba026147798592
+  Colour d78a8b42b180e9e5e81fef69d389b64d
+  Dashed 67f982bb47801197f86bbc990af235fa
+  Dotted 56c69bd6518c7713667e7435e4a7560c
+  Instructions da54e1c72fc39648f154ea8046be7b10
+  LineStyle 9040f192270b954aaff8da1757a91712
+  Move 1c11e679b0f31ed289fcfaac5c620661
+  PenDown 2e29a2694829a6b8d9b34fbe90c567d3
+  PenUp 9a17290b52cd724e4ec156284b2aec30
+  SetColour 9c707e0dc97e363d4ce5f3b36fc5dfc4
+  SetStyle af735bdc390176ca1e9e9a0270e813c8
+  Solid 22a82b2f52cf8732b26faf84e54cfb86
+  Stop 720ff061e412743d5941dee996ca3497
+  Turn 4f995b66f8feb55668f43d914079042f
+  black 1d063b505f9f76e3d40ebb3cc2cae964
+  blue decf2b32f066cdbd8f84f5c449e2c51d
+  brown 103feaccc8cd73b48f6e7a0c620300c2
+  green d77e600578995e83ccc99c2fb88e7a17
+  magenta 799b3f43db3bff218121d17e0cb884df
+  orange b0afb7b9aebe4571bae8ad52ff3fe499
+  red 060b84a119fb3a2fcc36a40d4023b0af
+  white 915994a821cec26787d7a05791bd5895
+  yellow 660f41d9fb328bb4973b5d067d2d66bf
+cd7419b3981cc8f3cebd7b7435f1c4e4
+  $fArbitraryInstructions ::
+    Test.QuickCheck.Arbitrary.Arbitrary Tortoise.Instructions
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.Instructions
+                  TestSupport.$fArbitraryInstructions1
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                  TestSupport.$fArbitraryInstructions_$cshrink -}
+6680176bbb4c826901039d9b5c1f2fe6
+  $fArbitraryInstructions1 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> Tortoise.Instructions
+  {- Arity: 2, Strictness: <L,1*U(U,U,U,1*U,A,A)><S(S),1*U(1*U)>,
+     Unfolding: (\ (w :: Test.QuickCheck.Random.QCGen)
+                   (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 TestSupport.$warbitraryInstructions
+                   TestSupport.$fArbitraryInstructions2
+                   w
+                   ww1 }) -}
+767546edc55542e7aafeb289fd11b4d7
+  $fArbitraryInstructions2 ::
+    (GHC.Types.Int, GHC.Types.Int, GHC.Types.Int, GHC.Types.Int,
+     GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((TestSupport.$fArbitraryInstructions8,
+                  TestSupport.$fArbitraryInstructions7,
+                  TestSupport.$fArbitraryInstructions6,
+                  TestSupport.$fArbitraryInstructions5,
+                  TestSupport.$fArbitraryInstructions4,
+                  TestSupport.$fArbitraryInstructions3)) -}
+a46daff81f2a890500a557ce4bdd5bc9
+  $fArbitraryInstructions3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+20d1a1c64f56b4fb9433504d2029a280
+  $fArbitraryInstructions4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+db0922be32e8ad4b03bfaaf7ea9e528e
+  $fArbitraryInstructions5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 15#) -}
+edee1b398a17011840bfb8a8ae91bbba
+  $fArbitraryInstructions6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
+59dbcb4b334a993a60f1ed4a8a441424
+  $fArbitraryInstructions7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 30#) -}
+2c562241eb7e6848e5ad2fe73e2942cd
+  $fArbitraryInstructions8 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 40#) -}
+c992c8d78592cc59e0415e7189651b6b
+  $fArbitraryInstructions_$cshrink ::
+    Tortoise.Instructions -> [Tortoise.Instructions]
+  {- Arity: 1, Strictness: <S,1*U> -}
+9e28f2d5c0c2b711e8bca505857e891e
+  $fArbitraryLineStyle ::
+    Test.QuickCheck.Arbitrary.Arbitrary Tortoise.LineStyle
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.LineStyle
+                  TestSupport.$fArbitraryLineStyle_$carbitrary
+                  TestSupport.$fArbitraryLineStyle_$cshrink -}
+b406aaffa82c8d183f35c75f2c554af4
+  $fArbitraryLineStyle1 ::
+    [Test.QuickCheck.Gen.Gen Tortoise.LineStyle]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.QuickCheck.Gen.Gen Tortoise.LineStyle)
+                   TestSupport.$fArbitraryLineStyle8
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.LineStyle>_R))
+                   TestSupport.$fArbitraryLineStyle2) -}
+7ce013a7c33f8110850baf2f900cd9f8
+  $fArbitraryLineStyle2 ::
+    [Test.QuickCheck.Gen.Gen Tortoise.LineStyle]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.QuickCheck.Gen.Gen Tortoise.LineStyle)
+                   TestSupport.$fArbitraryLineStyle7
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.LineStyle>_R))
+                   TestSupport.$fArbitraryLineStyle3) -}
+6e7f2feabea3631abe97a1582414e191
+  $fArbitraryLineStyle3 ::
+    [Test.QuickCheck.Gen.Gen Tortoise.LineStyle]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.QuickCheck.Gen.Gen Tortoise.LineStyle)
+                   TestSupport.$fArbitraryLineStyle4
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.LineStyle>_R))
+                   (GHC.Types.[] @ (Test.QuickCheck.Gen.Gen Tortoise.LineStyle))) -}
+7b5b69e16b0b672b029eeda6acb1eb26
+  $fArbitraryLineStyle4 ::
+    Test.QuickCheck.Random.QCGen -> GHC.Types.Int -> Tortoise.LineStyle
+  {- Arity: 2, Strictness: <L,U><L,A>m3,
+     Unfolding: (\ (r :: Test.QuickCheck.Random.QCGen)
+                   (n :: GHC.Types.Int) ->
+                 Tortoise.Dotted
+                   (case System.Random.$wrandomIvalInteger
+                           @ Test.QuickCheck.Random.QCGen
+                           @ GHC.Types.Int
+                           Test.QuickCheck.Random.$fRandomGenQCGen
+                           GHC.Num.$fNumInt
+                           TestSupport.$fArbitraryLineStyle6
+                           TestSupport.$fArbitraryLineStyle5
+                           r of ww2 { (#,#) ww3 ww4 ->
+                    ww3 })) -}
+a7c11419b1305ceb6509bec7b63df553
+  $fArbitraryLineStyle5 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (10) -}
+870aa7fedbe45268bf9fafc55bdfd449
+  $fArbitraryLineStyle6 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+358f5b050d307ffa0ed9b089cf64af23
+  $fArbitraryLineStyle7 ::
+    Test.QuickCheck.Random.QCGen -> GHC.Types.Int -> Tortoise.LineStyle
+  {- Arity: 2, Strictness: <L,U><L,A>m2,
+     Unfolding: (\ (r :: Test.QuickCheck.Random.QCGen)
+                   (n :: GHC.Types.Int) ->
+                 Tortoise.Dashed
+                   (case System.Random.$wrandomIvalInteger
+                           @ Test.QuickCheck.Random.QCGen
+                           @ GHC.Types.Int
+                           Test.QuickCheck.Random.$fRandomGenQCGen
+                           GHC.Num.$fNumInt
+                           TestSupport.$fArbitraryLineStyle6
+                           TestSupport.$fArbitraryLineStyle5
+                           r of ww2 { (#,#) ww3 ww4 ->
+                    ww3 })) -}
+7012a40503d9e1f955d4a94c04a9c860
+  $fArbitraryLineStyle8 ::
+    Test.QuickCheck.Random.QCGen -> GHC.Types.Int -> Tortoise.LineStyle
+  {- Arity: 2, Strictness: <L,U><L,A>m1,
+     Unfolding: (\ (r :: Test.QuickCheck.Random.QCGen)
+                   (n :: GHC.Types.Int) ->
+                 Tortoise.Solid
+                   (case System.Random.$wrandomIvalInteger
+                           @ Test.QuickCheck.Random.QCGen
+                           @ GHC.Types.Int
+                           Test.QuickCheck.Random.$fRandomGenQCGen
+                           GHC.Num.$fNumInt
+                           TestSupport.$fArbitraryLineStyle6
+                           TestSupport.$fArbitraryLineStyle5
+                           r of ww2 { (#,#) ww3 ww4 ->
+                    ww3 })) -}
+e49486e63afa3afe69481169b413c30a
+  $fArbitraryLineStyle_$carbitrary ::
+    Test.QuickCheck.Gen.Gen Tortoise.LineStyle
+  {- Unfolding: (Test.QuickCheck.Gen.oneof
+                   @ Tortoise.LineStyle
+                   TestSupport.$fArbitraryLineStyle1) -}
+59be600a9d785108ada3b38b53352454
+  $fArbitraryLineStyle_$cshrink ::
+    Tortoise.LineStyle -> [Tortoise.LineStyle]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds1 :: Tortoise.LineStyle) ->
+                 GHC.Types.[] @ Tortoise.LineStyle) -}
+0acf11f5881c3d72d1e304d2134ad528
+  $fArbitraryMoveTurnOnly ::
+    Test.QuickCheck.Arbitrary.Arbitrary TestSupport.MoveTurnOnly
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ TestSupport.MoveTurnOnly
+                  TestSupport.$fArbitraryMoveTurnOnly2
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                            (TestSupport.N:MoveTurnOnly[0])))
+                  TestSupport.$fArbitraryMoveTurnOnly1
+                    `cast`
+                  (<TestSupport.MoveTurnOnly>_R
+                   ->_R ([Sym (TestSupport.N:MoveTurnOnly[0])])_R) -}
+0acf11f5881c3d72d1e304d2134ad528
+  $fArbitraryMoveTurnOnly1 ::
+    TestSupport.MoveTurnOnly -> [Tortoise.Instructions]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds1 :: TestSupport.MoveTurnOnly) ->
+                 TestSupport.$fArbitraryInstructions_$cshrink
+                   ds1 `cast` (TestSupport.N:MoveTurnOnly[0])) -}
+9e35076db2a589f4252fe6511a9fcb96
+  $fArbitraryMoveTurnOnly2 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> Tortoise.Instructions
+  {- Arity: 2, Strictness: <L,1*U(U,U,U,1*U,A,A)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (r :: Test.QuickCheck.Random.QCGen) (n :: GHC.Types.Int) ->
+                 TestSupport.$fArbitraryMoveTurnOnly5
+                   TestSupport.$fArbitraryMoveTurnOnly3
+                   r
+                   n) -}
+6300357249ec683374a72fef006d5a3c
+  $fArbitraryMoveTurnOnly3 ::
+    (GHC.Types.Int, GHC.Types.Int, GHC.Types.Int, GHC.Types.Int,
+     GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((TestSupport.$fArbitraryInstructions8,
+                  TestSupport.$fArbitraryInstructions7,
+                  TestSupport.$fArbitraryMoveTurnOnly4,
+                  TestSupport.$fArbitraryMoveTurnOnly4,
+                  TestSupport.$fArbitraryMoveTurnOnly4,
+                  TestSupport.$fArbitraryMoveTurnOnly4)) -}
+f74be136bb6b227ad60d33c25a2ed710
+  $fArbitraryMoveTurnOnly4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+a7b089d377686b3c7ac5fa23c99cc5f8
+  $fArbitraryMoveTurnOnly5 ::
+    TestSupport.Frequencies
+    -> Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Tortoise.Instructions
+  {- Arity: 3,
+     Strictness: <L,1*U(U,U,U,U,U,U)><L,1*U(U,U,U,1*U,A,A)><S(S),1*U(1*U)>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: TestSupport.Frequencies)
+                   (w1 :: Test.QuickCheck.Random.QCGen)
+                   (w2 :: GHC.Types.Int) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 TestSupport.$warbitraryInstructions w w1 ww1 }) -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $fArbitraryNoPenControl ::
+    Test.QuickCheck.Arbitrary.Arbitrary TestSupport.NoPenControl
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ TestSupport.NoPenControl
+                  TestSupport.$fArbitraryNoPenControl2
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                            (TestSupport.N:NoPenControl[0])))
+                  TestSupport.$fArbitraryNoPenControl1
+                    `cast`
+                  (<TestSupport.NoPenControl>_R
+                   ->_R ([Sym (TestSupport.N:NoPenControl[0])])_R) -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $fArbitraryNoPenControl1 ::
+    TestSupport.NoPenControl -> [Tortoise.Instructions]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds1 :: TestSupport.NoPenControl) ->
+                 TestSupport.$fArbitraryInstructions_$cshrink
+                   ds1 `cast` (TestSupport.N:NoPenControl[0])) -}
+e58531382062dafd8945605646908258
+  $fArbitraryNoPenControl2 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> Tortoise.Instructions
+  {- Arity: 2, Strictness: <L,1*U(U,U,U,1*U,A,A)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (r :: Test.QuickCheck.Random.QCGen) (n :: GHC.Types.Int) ->
+                 TestSupport.$fArbitraryMoveTurnOnly5
+                   TestSupport.$fArbitraryNoPenControl3
+                   r
+                   n) -}
+44d0ad9aa427e7516a7f85ab4d6f3b14
+  $fArbitraryNoPenControl3 ::
+    (GHC.Types.Int, GHC.Types.Int, GHC.Types.Int, GHC.Types.Int,
+     GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((TestSupport.$fArbitraryInstructions8,
+                  TestSupport.$fArbitraryInstructions7,
+                  TestSupport.$fArbitraryInstructions6,
+                  TestSupport.$fArbitraryInstructions5,
+                  TestSupport.$fArbitraryMoveTurnOnly4,
+                  TestSupport.$fArbitraryMoveTurnOnly4)) -}
+0acf11f5881c3d72d1e304d2134ad528
+  $fEqMoveTurnOnly :: GHC.Classes.Eq TestSupport.MoveTurnOnly
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ TestSupport.MoveTurnOnly
+                  Tortoise.$fEqInstructions_$c==
+                    `cast`
+                  (Sym (TestSupport.N:MoveTurnOnly[0])
+                   ->_R Sym (TestSupport.N:MoveTurnOnly[0])
+                   ->_R <GHC.Types.Bool>_R)
+                  Tortoise.$fEqInstructions_$c/=
+                    `cast`
+                  (Sym (TestSupport.N:MoveTurnOnly[0])
+                   ->_R Sym (TestSupport.N:MoveTurnOnly[0])
+                   ->_R <GHC.Types.Bool>_R) -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $fEqNoPenControl :: GHC.Classes.Eq TestSupport.NoPenControl
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ TestSupport.NoPenControl
+                  Tortoise.$fEqInstructions_$c==
+                    `cast`
+                  (Sym (TestSupport.N:NoPenControl[0])
+                   ->_R Sym (TestSupport.N:NoPenControl[0])
+                   ->_R <GHC.Types.Bool>_R)
+                  Tortoise.$fEqInstructions_$c/=
+                    `cast`
+                  (Sym (TestSupport.N:NoPenControl[0])
+                   ->_R Sym (TestSupport.N:NoPenControl[0])
+                   ->_R <GHC.Types.Bool>_R) -}
+0acf11f5881c3d72d1e304d2134ad528
+  $fShowMoveTurnOnly :: GHC.Show.Show TestSupport.MoveTurnOnly
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ TestSupport.MoveTurnOnly
+                  TestSupport.$fShowMoveTurnOnly_$cshowsPrec
+                  TestSupport.$fShowMoveTurnOnly_$cshow
+                  TestSupport.$fShowMoveTurnOnly_$cshowList -}
+0acf11f5881c3d72d1e304d2134ad528
+  $fShowMoveTurnOnly1 :: TestSupport.MoveTurnOnly -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ (w :: TestSupport.MoveTurnOnly)
+                   (w1 :: GHC.Base.String) ->
+                 TestSupport.$w$cshowsPrec 0# w w1) -}
+fa5d40c8ca3aa31e1d63c45b8ce9f082
+  $fShowMoveTurnOnly2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+23274d0eba587fa24738c42bce551e76
+  $fShowMoveTurnOnly3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("MoveTurnOnly "#) -}
+0acf11f5881c3d72d1e304d2134ad528
+  $fShowMoveTurnOnly_$cshow ::
+    TestSupport.MoveTurnOnly -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: TestSupport.MoveTurnOnly) ->
+                 GHC.CString.unpackAppendCString#
+                   TestSupport.$fShowMoveTurnOnly3
+                   (Tortoise.$fShowInstructions_$cshowsPrec
+                      TestSupport.$fShowMoveTurnOnly2
+                      x `cast` (TestSupport.N:MoveTurnOnly[0])
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+0acf11f5881c3d72d1e304d2134ad528
+  $fShowMoveTurnOnly_$cshowList ::
+    [TestSupport.MoveTurnOnly] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ TestSupport.MoveTurnOnly
+                   TestSupport.$fShowMoveTurnOnly1) -}
+0acf11f5881c3d72d1e304d2134ad528
+  $fShowMoveTurnOnly_$cshowsPrec ::
+    GHC.Types.Int -> TestSupport.MoveTurnOnly -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U><L,U>, Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: TestSupport.MoveTurnOnly)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 TestSupport.$w$cshowsPrec ww1 w1 w2 }) -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $fShowNoPenControl :: GHC.Show.Show TestSupport.NoPenControl
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ TestSupport.NoPenControl
+                  TestSupport.$fShowNoPenControl_$cshowsPrec
+                  TestSupport.$fShowNoPenControl_$cshow
+                  TestSupport.$fShowNoPenControl_$cshowList -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $fShowNoPenControl1 :: TestSupport.NoPenControl -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U><L,U>,
+     Unfolding: (\ (w :: TestSupport.NoPenControl)
+                   (w1 :: GHC.Base.String) ->
+                 TestSupport.$w$cshowsPrec1 0# w w1) -}
+cdf993193e3fdbf15525e8ddb3a4de8a
+  $fShowNoPenControl2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("NoPenControl "#) -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $fShowNoPenControl_$cshow ::
+    TestSupport.NoPenControl -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: TestSupport.NoPenControl) ->
+                 GHC.CString.unpackAppendCString#
+                   TestSupport.$fShowNoPenControl2
+                   (Tortoise.$fShowInstructions_$cshowsPrec
+                      TestSupport.$fShowMoveTurnOnly2
+                      x `cast` (TestSupport.N:NoPenControl[0])
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $fShowNoPenControl_$cshowList ::
+    [TestSupport.NoPenControl] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ TestSupport.NoPenControl
+                   TestSupport.$fShowNoPenControl1) -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $fShowNoPenControl_$cshowsPrec ::
+    GHC.Types.Int -> TestSupport.NoPenControl -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,1*U><L,U>, Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: TestSupport.NoPenControl)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 TestSupport.$w$cshowsPrec1 ww1 w1 w2 }) -}
+4ec463ca0e2f87001909e53c85e94a12
+  $tc'MoveTurnOnly :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3432340604440734204##
+                   7681331745328003468##
+                   TestSupport.$trModule
+                   TestSupport.$tc'MoveTurnOnly2
+                   0#
+                   TestSupport.$tc'MoveTurnOnly1) -}
+24ddf192094494810c83b3d3eb503205
+  $tc'MoveTurnOnly1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+ed126718f4762dd5a2dd92bb7dccbdfa
+  $tc'MoveTurnOnly2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TestSupport.$tc'MoveTurnOnly3) -}
+cc13b105a4ede18ae5b72d3916130414
+  $tc'MoveTurnOnly3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'MoveTurnOnly"#) -}
+0a8e5d01100ff1beb1a4f2d1f80a31b4
+  $tc'NoPenControl :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10688579610538986878##
+                   15294642688299131706##
+                   TestSupport.$trModule
+                   TestSupport.$tc'NoPenControl2
+                   0#
+                   TestSupport.$tc'NoPenControl1) -}
+c0a1844a5d9fbd7cd27f33a203e9a489
+  $tc'NoPenControl1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+02217addc51215848047ca87fb02ca47
+  $tc'NoPenControl2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TestSupport.$tc'NoPenControl3) -}
+0fa3f90262c7d50fa2b5c62b3e7d35b0
+  $tc'NoPenControl3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'NoPenControl"#) -}
+be58f181d87b7d3913329cc72727533d
+  $tcMoveTurnOnly :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15925068198811299781##
+                   13501354631106929360##
+                   TestSupport.$trModule
+                   TestSupport.$tcMoveTurnOnly1
+                   0#
+                   GHC.Types.krep$*) -}
+0dd2aaee2c1001a76b02cb0a6fd8c443
+  $tcMoveTurnOnly1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TestSupport.$tcMoveTurnOnly2) -}
+9696d880b7ba11990fca05df833ff776
+  $tcMoveTurnOnly2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("MoveTurnOnly"#) -}
+fd115d15de9ad6a09c5f6c0a573ec721
+  $tcNoPenControl :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14741279479802823648##
+                   1350713837518911984##
+                   TestSupport.$trModule
+                   TestSupport.$tcNoPenControl1
+                   0#
+                   GHC.Types.krep$*) -}
+7e7acd54a1d7064adf9c07382397f93e
+  $tcNoPenControl1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TestSupport.$tcNoPenControl2) -}
+8216864618ccf17a0b638d748567db51
+  $tcNoPenControl2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("NoPenControl"#) -}
+26bc221474a7a281482a8a43b5489f34
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   TestSupport.$trModule3
+                   TestSupport.$trModule1) -}
+47d726cb6226d3d6c0bdacb7344a5f5c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TestSupport.$trModule2) -}
+5f8f91d3f539465a0e99ec8e5dfa9a4b
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("TestSupport"#) -}
+623d18176e5c7d7cc733eedb66bde5f9
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TestSupport.$trModule4) -}
+0875b34a5c548c382fa589319cea1ffb
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+0acf11f5881c3d72d1e304d2134ad528
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> TestSupport.MoveTurnOnly -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: TestSupport.MoveTurnOnly)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.CString.unpackAppendCString#
+                        TestSupport.$fShowMoveTurnOnly3
+                        (Tortoise.$fShowInstructions_$cshowsPrec
+                           TestSupport.$fShowMoveTurnOnly2
+                           w `cast` (TestSupport.N:MoveTurnOnly[0])
+                           w1)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           TestSupport.$fShowMoveTurnOnly3
+                           (Tortoise.$fShowInstructions_$cshowsPrec
+                              TestSupport.$fShowMoveTurnOnly2
+                              w `cast` (TestSupport.N:MoveTurnOnly[0])
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))) }) -}
+d6d1a4023e3b1c8d7980fe88babbfffe
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> TestSupport.NoPenControl -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: TestSupport.NoPenControl)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.CString.unpackAppendCString#
+                        TestSupport.$fShowNoPenControl2
+                        (Tortoise.$fShowInstructions_$cshowsPrec
+                           TestSupport.$fShowMoveTurnOnly2
+                           w `cast` (TestSupport.N:NoPenControl[0])
+                           w1)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           TestSupport.$fShowNoPenControl2
+                           (Tortoise.$fShowInstructions_$cshowsPrec
+                              TestSupport.$fShowMoveTurnOnly2
+                              w `cast` (TestSupport.N:NoPenControl[0])
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1))) }) -}
+a5a8a06d2fa4619ef8b4c0c7046907a5
+  $warbitraryInstructions ::
+    TestSupport.Frequencies
+    -> Test.QuickCheck.Random.QCGen
+    -> GHC.Prim.Int#
+    -> Tortoise.Instructions
+  {- Arity: 3,
+     Strictness: <L,1*U(U,U,U,U,U,U)><L,1*U(U,U,U,1*U,A,A)><S,1*U>,
+     Inline: [0] -}
+9e2b25a3e490ad01185c8c81a9f4f0ec
+  type Frequencies =
+    (GHC.Types.Int, GHC.Types.Int, GHC.Types.Int, GHC.Types.Int,
+     GHC.Types.Int, GHC.Types.Int)
+0acf11f5881c3d72d1e304d2134ad528
+  newtype MoveTurnOnly = MoveTurnOnly Tortoise.Instructions
+d6d1a4023e3b1c8d7980fe88babbfffe
+  newtype NoPenControl = NoPenControl Tortoise.Instructions
+instance [safe] [orphan] Test.QuickCheck.Arbitrary.Arbitrary [Tortoise.Instructions]
+  = TestSupport.$fArbitraryInstructions
+instance [safe] [orphan] Test.QuickCheck.Arbitrary.Arbitrary [Tortoise.LineStyle]
+  = TestSupport.$fArbitraryLineStyle
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [TestSupport.MoveTurnOnly]
+  = TestSupport.$fArbitraryMoveTurnOnly
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [TestSupport.NoPenControl]
+  = TestSupport.$fArbitraryNoPenControl
+instance [safe] GHC.Classes.Eq [TestSupport.MoveTurnOnly]
+  = TestSupport.$fEqMoveTurnOnly
+instance [safe] GHC.Classes.Eq [TestSupport.NoPenControl]
+  = TestSupport.$fEqNoPenControl
+instance [safe] GHC.Show.Show [TestSupport.MoveTurnOnly]
+  = TestSupport.$fShowMoveTurnOnly
+instance [safe] GHC.Show.Show [TestSupport.NoPenControl]
+  = TestSupport.$fShowNoPenControl
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

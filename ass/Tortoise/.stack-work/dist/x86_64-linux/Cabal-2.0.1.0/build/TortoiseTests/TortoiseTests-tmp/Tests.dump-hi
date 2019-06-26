@@ -1,0 +1,1686 @@
+
+==================== FINAL INTERFACE ====================
+2019-06-24 05:34:29.144259 UTC
+
+interface main:Main 8022
+  interface hash: 798ca1ac03182d9ecac3ee257879d882
+  ABI hash: 77142169e07ad27960cea5898bdb1d67
+  export-list hash: dc495d86e20c1bd74b725eb5c05660a4
+  orphan hash: a050665a47f8682f800ad521b7d2473d
+  flag hash: a88a6ad8981a699b967646c5d5a9b11e
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.prop_andThen_assoc
+  Main.prop_andThen_compose
+  Main.prop_andThen_left_id
+  Main.prop_andThen_right_id
+  Main.prop_invisibly_sems
+  Main.prop_loop_compose
+  Main.prop_overlay_concat
+  Main.prop_overlay_finalState
+  Main.prop_retrace_sems
+  Main.tests
+module dependencies: TestSupport Tortoise TortoiseCombinators
+package dependencies: QuickCheck-2.10.1 ansi-terminal-0.7.1.1
+                      ansi-wl-pprint-0.6.8.1 array-0.5.2.0 async-2.1.1.1 base-4.10.1.0
+                      binary-0.8.5.1 bytestring-0.10.8.2 clock-0.7.2 colour-2.3.4
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-boot-th-8.2.2
+                      ghc-prim-0.5.1.1 integer-gmp-1.0.1.0 mtl-2.2.1
+                      optparse-applicative-0.14.0.0 parsec-3.1.11 pretty-1.1.3.3
+                      primitive-0.6.2.0 process-1.6.1.0 random-1.1 regex-base-0.93.2
+                      regex-tdfa-1.2.2 stm-2.4.4.1 tagged-0.8.5 tasty-0.11.3
+                      tasty-quickcheck-0.9.1 template-haskell-2.12.0.0 text-1.2.2.2
+                      tf-random-0.5 time-1.8.0.2 transformers-0.5.2.0
+                      unbounded-delays-0.1.1.0 unix-2.7.2.2
+orphans: main:TestSupport
+         regex-tdfa-1.2.2:Text.Regex.TDFA.ByteString
+         regex-tdfa-1.2.2:Text.Regex.TDFA.ByteString.Lazy
+         regex-tdfa-1.2.2:Text.Regex.TDFA.Sequence
+         regex-tdfa-1.2.2:Text.Regex.TDFA.String text-1.2.2.2:Data.Text.Lazy
+         text-1.2.2.2:Data.Text binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.2.2:Data.Text.Show
+         regex-base-0.93.2:Text.Regex.Base.Context
+         stm-2.4.4.1:Control.Monad.STM colour-2.3.4:Data.Colour
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats clock-0.7.2:System.Clock
+                         containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0:Control.Monad.Primitive tagged-0.8.5:Data.Tagged
+                         tasty-0.11.3:Test.Tasty.Core
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2:Data.Text text-1.2.2.2:Data.Text.Lazy
+import  -/  QuickCheck-2.10.1:Test.QuickCheck e7cc3bba148aa39b704c2b95e2084a35
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:Data.List 4ab7fa2a1b87502b23af891a384f0506
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  TestSupport f4c71ec516300836e52e7e01d3beee46
+  exports: e21cbe78c069ad3b8ae7923d340a6da2
+import  -/  Tortoise b1059e1036400af094eb900238a21641
+  exports: 17bb42b7abb4b8f657ba026147798592
+  Stop 720ff061e412743d5941dee996ca3497
+  comp 139a2ea2a25b20ed8e28a18580c2cbe8
+  finalState 893c77c4eca456ca03ab9a21f199b83d
+  nop 17af199c98798961916bc19dad91c3f3
+  start 87a01e15279604005c6a2ce1f506677f
+  tortoise 765c86f57e0db54acf0ae7d1bdc5ea8f
+  tortoisePic ad6091a5b5be6ed3c3b5954609f63863
+import  -/  TortoiseCombinators 14ec04594d957d3df4abbd580cc602e4
+  exports: 735a505de1f9270ae5e1398b77de11fc
+  andThen 7e944ba76d6b7ad2e6ee62cc449a3a33
+  invisibly 1d0fbb2818d4cb37b3c87e1423721de3
+  loop a615631aa6244c0e4907d6d44a20c810
+  overlay aee0a8f1e46c623fa99a25a4bee5b832
+  retrace 24b9f72963e080cca64723f447706789
+import  -/  tasty-0.11.3:Test.Tasty fd7a7d678fb037373a84e0d2c94ba977
+import  -/  tasty-0.11.3:Test.Tasty.Core ad38a7bfdd07cb983b46499179f5feea
+import  -/  tasty-quickcheck-0.9.1:Test.Tasty.QuickCheck c3b07024cf3e9fd1ecc9357c468b6072
+a9bce024b595836084f09d1f461aa7bb
+  $s$fShow[] :: GHC.Show.Show [Tortoise.Instructions]
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ [Tortoise.Instructions]
+                  (\ (ds :: GHC.Types.Int) -> Tortoise.$fShowInstructions_$cshowList)
+                  (\ (x :: [Tortoise.Instructions]) ->
+                   GHC.Show.showList__
+                     @ Tortoise.Instructions
+                     Tortoise.$fShowInstructions1
+                     x
+                     (GHC.Types.[] @ GHC.Types.Char))
+                  (\ (ls :: [[Tortoise.Instructions]]) (s :: GHC.Base.String) ->
+                   GHC.Show.showList__
+                     @ [Tortoise.Instructions]
+                     Tortoise.$fShowInstructions_$cshowList
+                     ls
+                     s) -}
+ceaf1958fefb1c1a0f629bfeeef8ca21
+  $s$fTestable(->)4 ::
+    (Tortoise.Instructions -> Tortoise.Instructions -> GHC.Types.Bool)
+    -> Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 3,
+     Strictness: <L,C(U)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Tortoise.Instructions
+                         -> Tortoise.Instructions -> GHC.Types.Bool)
+                   (w1 :: Test.QuickCheck.Random.QCGen)
+                   (w2 :: GHC.Types.Int) ->
+                 case w1
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$w$dTestable w ww1 ww2 ww3 ww4 w2 }) -}
+3a5a9e0f0531b59a8ef1d4a082c81b43
+  $s$fTestable(->)5 ::
+    (Tortoise.Instructions -> GHC.Types.Bool)
+    -> Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 3,
+     Strictness: <L,C(U)><S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Tortoise.Instructions -> GHC.Types.Bool)
+                   (w1 :: Test.QuickCheck.Random.QCGen)
+                   (w2 :: GHC.Types.Int) ->
+                 case w1
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$w$dTestable1 w ww1 ww2 ww3 ww4 w2 }) -}
+9d72b2fddb818bcd8919052935e0f1f3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+3108ceeaf5a318be844de422b45de9d8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+33bd129667974f0a0ba4a893af79107d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+d2a3b9d83d3afd1ce8d45c32d47c6c4e
+  $w$dTestable ::
+    (Tortoise.Instructions -> Tortoise.Instructions -> GHC.Types.Bool)
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 6, Strictness: <L,C(U)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: Tortoise.Instructions
+                         -> Tortoise.Instructions -> GHC.Types.Bool)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ Tortoise.Instructions
+                   @ (Tortoise.Instructions -> GHC.Types.Bool)
+                   Tortoise.$fShowInstructions
+                   Main.$s$fTestable(->)5
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                (Test.QuickCheck.Property.N:Prop[0])))
+                                                      (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                           <Tortoise.Instructions
+                                                            -> GHC.Types.Bool>_N))))))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <Tortoise.Instructions
+                                                       -> Tortoise.Instructions
+                                                       -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R <Tortoise.Instructions
+                                                   -> Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   w
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w1) -}
+1f20ede0c8ea507b22412d70d4b52e1e
+  $w$dTestable1 ::
+    (Tortoise.Instructions -> GHC.Types.Bool)
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 6, Strictness: <L,C(U)><S,U><S,U><S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: Tortoise.Instructions -> GHC.Types.Bool)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w1 :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ Tortoise.Instructions
+                   @ GHC.Types.Bool
+                   Tortoise.$fShowInstructions
+                   Test.QuickCheck.Property.$fTestableBool_$cproperty
+                     `cast`
+                   (Trans
+                        (Sym (Test.QuickCheck.Property.N:Testable[0] <GHC.Types.Bool>_N))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <Tortoise.Instructions -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   w
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w1) -}
+e4ab7fc726c35c9efdc647facaf86560
+  $wtests ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ [Tortoise.Instructions]
+                   @ GHC.Types.Bool
+                   Main.$s$fShow[]
+                   Test.QuickCheck.Property.$fTestableBool_$cproperty
+                     `cast`
+                   (Trans
+                        (Sym (Test.QuickCheck.Property.N:Testable[0] <GHC.Types.Bool>_N))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                [Tortoise.Instructions]>_R
+                                             ->_R <GHC.Show.Show [Tortoise.Instructions]>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <[Tortoise.Instructions] -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                [Tortoise.Instructions]>_R
+                                             ->_R <GHC.Show.Show [Tortoise.Instructions]>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <[Tortoise.Instructions] -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   Main.tests12
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <[Tortoise.Instructions]>_R))
+                   Main.tests11
+                   Main.prop_overlay_finalState
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+f7a5a2a23a31b0d6c05d2caa460f29a9
+  $wtests1 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ [Tortoise.Instructions]
+                   @ GHC.Types.Bool
+                   Main.$s$fShow[]
+                   Test.QuickCheck.Property.$fTestableBool_$cproperty
+                     `cast`
+                   (Trans
+                        (Sym (Test.QuickCheck.Property.N:Testable[0] <GHC.Types.Bool>_N))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                [Tortoise.Instructions]>_R
+                                             ->_R <GHC.Show.Show [Tortoise.Instructions]>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <[Tortoise.Instructions] -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                [Tortoise.Instructions]>_R
+                                             ->_R <GHC.Show.Show [Tortoise.Instructions]>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <[Tortoise.Instructions] -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   Main.tests12
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <[Tortoise.Instructions]>_R))
+                   Main.tests11
+                   Main.prop_overlay_finalState
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+1fb9dc0320078661f7d846e3059c6fd9
+  $wtests2 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ Tortoise.Instructions
+                   @ GHC.Types.Bool
+                   Tortoise.$fShowInstructions
+                   Test.QuickCheck.Property.$fTestableBool_$cproperty
+                     `cast`
+                   (Trans
+                        (Sym (Test.QuickCheck.Property.N:Testable[0] <GHC.Types.Bool>_N))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <Tortoise.Instructions -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   Main.prop_retrace_sems
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+d41fdaf19a5750da47c472048306c8b9
+  $wtests3 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ Tortoise.Instructions
+                   @ GHC.Types.Bool
+                   Tortoise.$fShowInstructions
+                   Test.QuickCheck.Property.$fTestableBool_$cproperty
+                     `cast`
+                   (Trans
+                        (Sym (Test.QuickCheck.Property.N:Testable[0] <GHC.Types.Bool>_N))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <Tortoise.Instructions -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   Main.prop_invisibly_sems
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+d6a1796602dc4d4ba50577f86b754ede
+  $wtests4 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ GHC.Types.Int
+                   @ (Tortoise.Instructions -> GHC.Types.Bool)
+                   GHC.Show.$fShowInt
+                   Main.$s$fTestable(->)5
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                (Test.QuickCheck.Property.N:Prop[0])))
+                                                      (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                           <Tortoise.Instructions
+                                                            -> GHC.Types.Bool>_N))))))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary GHC.Types.Int>_R
+                                             ->_R <GHC.Show.Show GHC.Types.Int>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <GHC.Types.Int
+                                                       -> Tortoise.Instructions
+                                                       -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary GHC.Types.Int>_R
+                                             ->_R <GHC.Show.Show GHC.Types.Int>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R <GHC.Types.Int
+                                                   -> Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   Test.QuickCheck.Arbitrary.$fArbitrary1IntMap_$sarbitrarySizedIntegral
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <GHC.Types.Int>_R))
+                   Test.QuickCheck.Arbitrary.$fArbitrary1IntMap_$sshrinkIntegral
+                   Main.prop_loop_compose
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+1dae84904333ad334dd5958211ecb6df
+  $wtests5 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ Tortoise.Instructions
+                   @ (Tortoise.Instructions -> GHC.Types.Bool)
+                   Tortoise.$fShowInstructions
+                   Main.$s$fTestable(->)5
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                (Test.QuickCheck.Property.N:Prop[0])))
+                                                      (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                           <Tortoise.Instructions
+                                                            -> GHC.Types.Bool>_N))))))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <Tortoise.Instructions
+                                                       -> Tortoise.Instructions
+                                                       -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R <Tortoise.Instructions
+                                                   -> Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   Main.prop_andThen_compose
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+ef67083e771133b6dc89d641ca46ed7b
+  $wtests6 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ Tortoise.Instructions
+                   @ (Tortoise.Instructions
+                      -> Tortoise.Instructions -> GHC.Types.Bool)
+                   Tortoise.$fShowInstructions
+                   Main.$s$fTestable(->)4
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R <Tortoise.Instructions
+                                                   -> Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                (Test.QuickCheck.Property.N:Prop[0])))
+                                                      (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                           <Tortoise.Instructions
+                                                            -> Tortoise.Instructions
+                                                            -> GHC.Types.Bool>_N))))))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions
+                                                      -> Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <Tortoise.Instructions
+                                                       -> Tortoise.Instructions
+                                                       -> Tortoise.Instructions
+                                                       -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     (Tortoise.Instructions
+                                                      -> Tortoise.Instructions -> GHC.Types.Bool)>_R
+                                             ->_R <Tortoise.Instructions
+                                                   -> Tortoise.Instructions
+                                                   -> Tortoise.Instructions
+                                                   -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   Main.prop_andThen_assoc
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+33053325e5843b4397a082cd32dade9b
+  $wtests7 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ Tortoise.Instructions
+                   @ GHC.Types.Bool
+                   Tortoise.$fShowInstructions
+                   Test.QuickCheck.Property.$fTestableBool_$cproperty
+                     `cast`
+                   (Trans
+                        (Sym (Test.QuickCheck.Property.N:Testable[0] <GHC.Types.Bool>_N))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <Tortoise.Instructions -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   Main.prop_andThen_left_id
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+f7ee5d999942f91f29c28af36a7ada58
+  $wtests8 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Word#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Word#)
+                   (ww2 :: GHC.Prim.Word#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int) ->
+                 Test.QuickCheck.Property.$wforAllShrink
+                   @ Tortoise.Instructions
+                   @ GHC.Types.Bool
+                   Tortoise.$fShowInstructions
+                   Test.QuickCheck.Property.$fTestableBool_$cproperty
+                     `cast`
+                   (Trans
+                        (Sym (Test.QuickCheck.Property.N:Testable[0] <GHC.Types.Bool>_N))
+                        (Nth:2
+                             (Nth:3
+                                  (Nth:3
+                                       (Trans
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R Test.QuickCheck.Property.N:Testable[0]
+                                                      <Tortoise.Instructions -> GHC.Types.Bool>_N)
+                                            (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                Tortoise.Instructions>_R
+                                             ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                             ->_R <Test.QuickCheck.Property.Testable
+                                                     GHC.Types.Bool>_R
+                                             ->_R <Tortoise.Instructions -> GHC.Types.Bool>_R
+                                             ->_R Trans
+                                                      (Test.QuickCheck.Property.N:Property[0])
+                                                      (Test.QuickCheck.Gen.N:Gen[0]
+                                                           (Test.QuickCheck.Property.N:Prop[0]))))))))
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   Main.prop_andThen_left_id
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   w) -}
+4c5eaabe73f6dcfddb8451bf4f766df4
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+08eec85abd5818920ae191838b63f097
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.Prim.myThreadId# s of ds { (#,#) ipv ipv1 ->
+                 case GHC.Prim.mkWeakNoFinalizer#
+                        @ 'GHC.Types.UnliftedRep
+                        @ GHC.Prim.ThreadId#
+                        @ GHC.Conc.Sync.ThreadId
+                        ipv1
+                        (GHC.Conc.Sync.ThreadId ipv1)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 Test.Tasty.CmdLine.defaultMainWithIngredients2
+                   Test.Tasty.defaultIngredients
+                   Main.tests
+                   ipv2
+                   ipv3 } }) -}
+643ff2607201f6c4c47c9bc41b0bb681
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+c6952b2720b9d1a0ea30d6cc4a9e3028
+  prop_andThen_assoc ::
+    Tortoise.Instructions
+    -> Tortoise.Instructions -> Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 3, Strictness: <B,A><B,A><B,A>b,
+     Unfolding: InlineRule (3, True, False)
+                (\ (i1 :: Tortoise.Instructions)
+                   (i2 :: Tortoise.Instructions)
+                   (i3 :: Tortoise.Instructions) ->
+                 case TortoiseCombinators.andThen1 ret_ty GHC.Types.Bool of {}) -}
+dfc08ec81d774751d3fe0ad127565a9b
+  prop_andThen_compose ::
+    Tortoise.Instructions -> Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <B,A><B,A>b,
+     Unfolding: InlineRule (2, True, False)
+                (\ (i1 :: Tortoise.Instructions) (i2 :: Tortoise.Instructions) ->
+                 case TortoiseCombinators.andThen1 ret_ty GHC.Types.Bool of {}) -}
+3a430219a81fe72494020eec836e39cb
+  prop_andThen_left_id :: Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <B,A>b,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: Tortoise.Instructions) ->
+                 case TortoiseCombinators.andThen1 ret_ty GHC.Types.Bool of {}) -}
+cc3e673dec5fce02d890a8be232a4c2a
+  prop_andThen_right_id :: Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <B,A>b,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: Tortoise.Instructions) ->
+                 case TortoiseCombinators.andThen1 ret_ty GHC.Types.Bool of {}) -}
+bcb924d9c2a49fd7e1491d092af01e98
+  prop_invisibly_sems :: Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <B,A>b,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: Tortoise.Instructions) ->
+                 case TortoiseCombinators.invisibly1 ret_ty GHC.Types.Bool of {}) -}
+efc1eea67b01f7c183d38a70923dd56e
+  prop_loop_compose ::
+    GHC.Types.Int -> Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <B,A><B,A>b,
+     Unfolding: InlineRule (2, True, False)
+                (\ (n :: GHC.Types.Int) (i :: Tortoise.Instructions) ->
+                 case TortoiseCombinators.loop1 ret_ty GHC.Types.Bool of {}) -}
+95dca1ee3a25f213d2911237966d27d7
+  prop_overlay_concat :: [Tortoise.Instructions] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <B,A>b,
+     Unfolding: InlineRule (1, True, False)
+                (\ (is :: [Tortoise.Instructions]) ->
+                 case TortoiseCombinators.overlay1 ret_ty GHC.Types.Bool of {}) -}
+0e7476a1c900225997d44ed45901916b
+  prop_overlay_finalState ::
+    [Tortoise.Instructions] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <B,A>b,
+     Unfolding: InlineRule (1, True, False)
+                (\ (is :: [Tortoise.Instructions]) ->
+                 case TortoiseCombinators.overlay1 ret_ty GHC.Types.Bool of {}) -}
+1ba99284db4d7138940c29da9f5d0ae9
+  prop_retrace_sems :: Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <B,A>b,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: Tortoise.Instructions) ->
+                 case TortoiseCombinators.retrace1 ret_ty GHC.Types.Bool of {}) -}
+665b37acb2e240281930c8657343fb08
+  tests :: Test.Tasty.Core.TestTree
+  {- Strictness: m2,
+     Unfolding: (Test.Tasty.Core.TestGroup Main.tests68 Main.tests1) -}
+fc6da5195081e49681b2654f1e4f65bb
+  tests1 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests43
+                   Main.tests2) -}
+0ba44064dc2d64fd5d7e7f61177934fa
+  tests10 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests ww1 ww2 ww3 ww4 w1 }) -}
+5c65e8172704d501d00a8aef82711aea
+  tests11 :: [Tortoise.Instructions] -> [[Tortoise.Instructions]]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: [Tortoise.Instructions]) ->
+                 Test.QuickCheck.Arbitrary.shrinkList
+                   @ Tortoise.Instructions
+                   TestSupport.$fArbitraryInstructions_$cshrink
+                   eta) -}
+71d6799299f2768298c0d88ff7a3ae37
+  tests12 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> [Tortoise.Instructions]
+  {- Arity: 2,
+     Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><S(S),1*U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (w1 :: Test.QuickCheck.Random.QCGen) (w2 :: GHC.Types.Int) ->
+                 case w1
+                        `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case w2 of ww7 { GHC.Types.I# ww8 ->
+                 Test.QuickCheck.Gen.$wlistOf
+                   @ Tortoise.Instructions
+                   TestSupport.$fArbitraryInstructions1
+                     `cast`
+                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Tortoise.Instructions>_R))
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww8 } }) -}
+b76d798db4ec288970f268be6ee4a458
+  tests13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests14) -}
+d5fd9324afc0337ad88759cad72aeea9
+  tests14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("concat"#) -}
+db983b6695e2f97ce95df7dd99177845
+  tests15 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests17
+                   Main.tests16
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          [Tortoise.Instructions]>_R
+                                                       ->_R <GHC.Show.Show
+                                                               [Tortoise.Instructions]>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R <[Tortoise.Instructions]
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          [Tortoise.Instructions]>_R
+                                                       ->_R <GHC.Show.Show
+                                                               [Tortoise.Instructions]>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <[Tortoise.Instructions]
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <[Tortoise.Instructions] -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+faece684ba6665d18b20bd04c667bd29
+  tests16 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests1 ww1 ww2 ww3 ww4 w1 }) -}
+b385e4f30c37ec4a299504c0c2290ddd
+  tests17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests18) -}
+13fe2b985fb2205cba2769516b67b0d4
+  tests18 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("final state"#) -}
+0c29bc7a28db4909ce809c63ebd966fd
+  tests19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests20) -}
+c6846938fec7cac8ad994f45c39facdc
+  tests2 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests35
+                   Main.tests3) -}
+b59658ff8d691af670d585a1d162599f
+  tests20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("overlay"#) -}
+9a1cea4f8d0c554e697809a23ec5df10
+  tests21 :: Test.Tasty.Core.TestTree
+  {- Strictness: m2,
+     Unfolding: (Test.Tasty.Core.TestGroup Main.tests27 Main.tests22) -}
+7c07a66a63747be8e4a9859dfeb80821
+  tests22 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests23
+                   (GHC.Types.[] @ Test.Tasty.Core.TestTree)) -}
+98e6b4470ef5c033aaff863edea921f4
+  tests23 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests25
+                   Main.tests24
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R <Tortoise.Instructions
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <Tortoise.Instructions
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <Tortoise.Instructions -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+7693d4750a7c009dc8f146ca682420ab
+  tests24 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests2 ww1 ww2 ww3 ww4 w1 }) -}
+600991fa19193c6951eba17d5368bf57
+  tests25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests26) -}
+b70f85ee47c37cb72b23c9cefc2fe466
+  tests26 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("semantics"#) -}
+24273ecae8b7ce5cc5021a1767ca40c3
+  tests27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests28) -}
+98178ac88da33dbd32d28f2439352480
+  tests28 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("retrace"#) -}
+d18339ca9063b0a22bf42453bb10fcf4
+  tests29 :: Test.Tasty.Core.TestTree
+  {- Strictness: m2,
+     Unfolding: (Test.Tasty.Core.TestGroup Main.tests33 Main.tests30) -}
+8b4ce3775940bee637ca730f43ac4695
+  tests3 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests29
+                   Main.tests4) -}
+43a7034f94b9eee5758e01e2711355a7
+  tests30 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests31
+                   (GHC.Types.[] @ Test.Tasty.Core.TestTree)) -}
+50c00562bda5807236e054f7c4bfe155
+  tests31 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests25
+                   Main.tests32
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R <Tortoise.Instructions
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <Tortoise.Instructions
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <Tortoise.Instructions -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+0f9a7c1b6ff4802a3a5eb44c0737b251
+  tests32 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests3 ww1 ww2 ww3 ww4 w1 }) -}
+a2e1c3121dc247e8b09aac975f150c67
+  tests33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests34) -}
+2b285c5b74dc7c5f39e9158d13f04c67
+  tests34 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("invisibly"#) -}
+05ab8cda18881dd011d79903e9c4ead5
+  tests35 :: Test.Tasty.Core.TestTree
+  {- Strictness: m2,
+     Unfolding: (Test.Tasty.Core.TestGroup Main.tests41 Main.tests36) -}
+f0af6a30208582d914b678dea289095d
+  tests36 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests37
+                   (GHC.Types.[] @ Test.Tasty.Core.TestTree)) -}
+4341799bb1b7ab5a216acc103d43cd01
+  tests37 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests39
+                   Main.tests38
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          GHC.Types.Int>_R
+                                                       ->_R <GHC.Show.Show GHC.Types.Int>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               (Tortoise.Instructions
+                                                                -> GHC.Types.Bool)>_R
+                                                       ->_R <GHC.Types.Int
+                                                             -> Tortoise.Instructions
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          GHC.Types.Int>_R
+                                                       ->_R <GHC.Show.Show GHC.Types.Int>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               (Tortoise.Instructions
+                                                                -> GHC.Types.Bool)>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <GHC.Types.Int
+                                                                      -> Tortoise.Instructions
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <GHC.Types.Int
+                                        -> Tortoise.Instructions -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+d38a57f277e54b9c4efdcb5f424f7c8c
+  tests38 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests4 ww1 ww2 ww3 ww4 w1 }) -}
+8d82ecce11f0f48e638b91e106023279
+  tests39 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests40) -}
+cf4c86aacebf4c40d6aee2a7b08f0020
+  tests4 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests21
+                   Main.tests5) -}
+2872b57346c566fffecff1f2c8bb0672
+  tests40 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("n-ary composition"#) -}
+167f671e486fc96be8f528e2622e5a0c
+  tests41 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests42) -}
+7a7988d023d0c071cc9d9d296634d081
+  tests42 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("loop"#) -}
+905188d0de3f4bea98cadd11d59797ae
+  tests43 :: Test.Tasty.Core.TestTree
+  {- Strictness: m2,
+     Unfolding: (Test.Tasty.Core.TestGroup Main.tests66 Main.tests44) -}
+677078d9537edb8ffb4900ba5a904b4f
+  tests44 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests48
+                   Main.tests45) -}
+273e0c5034c6f5a2e143567e2dc09264
+  tests45 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests46
+                   (GHC.Types.[] @ Test.Tasty.Core.TestTree)) -}
+af4c7e2eb997265d2906f2ce5e325d28
+  tests46 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests25
+                   Main.tests47
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               (Tortoise.Instructions
+                                                                -> GHC.Types.Bool)>_R
+                                                       ->_R <Tortoise.Instructions
+                                                             -> Tortoise.Instructions
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               (Tortoise.Instructions
+                                                                -> GHC.Types.Bool)>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <Tortoise.Instructions
+                                                                      -> Tortoise.Instructions
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <Tortoise.Instructions
+                                        -> Tortoise.Instructions -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+dcedbdc7f2a741ccdb34a28ebc025168
+  tests47 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests5 ww1 ww2 ww3 ww4 w1 }) -}
+4af111cefcf4dda8a7eab476757cf46a
+  tests48 :: Test.Tasty.Core.TestTree
+  {- Strictness: m2,
+     Unfolding: (Test.Tasty.Core.TestGroup Main.tests64 Main.tests49) -}
+7a951edf4e3aef05072a800c56273f12
+  tests49 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests60
+                   Main.tests50) -}
+32e1029627dbc4de76f375aff5b49971
+  tests5 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests6
+                   (GHC.Types.[] @ Test.Tasty.Core.TestTree)) -}
+7ff9d36c56e7272f8fdd5f6c52ad50c1
+  tests50 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests56
+                   Main.tests51) -}
+0ad8bd770489edf4040ce7bb959d0c1b
+  tests51 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests52
+                   (GHC.Types.[] @ Test.Tasty.Core.TestTree)) -}
+9dcf1d97be18edb15b8c52fe3bda95bf
+  tests52 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests54
+                   Main.tests53
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               (Tortoise.Instructions
+                                                                -> Tortoise.Instructions
+                                                                -> GHC.Types.Bool)>_R
+                                                       ->_R <Tortoise.Instructions
+                                                             -> Tortoise.Instructions
+                                                             -> Tortoise.Instructions
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               (Tortoise.Instructions
+                                                                -> Tortoise.Instructions
+                                                                -> GHC.Types.Bool)>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <Tortoise.Instructions
+                                                                      -> Tortoise.Instructions
+                                                                      -> Tortoise.Instructions
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <Tortoise.Instructions
+                                        -> Tortoise.Instructions
+                                        -> Tortoise.Instructions
+                                        -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+9762bb999378b7c22fe916651750f4c5
+  tests53 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests6 ww1 ww2 ww3 ww4 w1 }) -}
+5cc32b0759685c10ab23fb8c4a703627
+  tests54 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests55) -}
+a5a44000c9fa7b2f05b72509da059493
+  tests55 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("associativity"#) -}
+63a1f854a00cd85e82f6ba384e02c7b1
+  tests56 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests58
+                   Main.tests57
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R <Tortoise.Instructions
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <Tortoise.Instructions
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <Tortoise.Instructions -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+17e74834363ef1ace65983369ab90d97
+  tests57 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests7 ww1 ww2 ww3 ww4 w1 }) -}
+05664c5f3d6d84c15eb4c70d07fea66c
+  tests58 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests59) -}
+34e2d09d51616069a3a9251d0ef2e950
+  tests59 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("right identity"#) -}
+61283f0ce22eb041a66a150a228929f5
+  tests6 :: Test.Tasty.Core.TestTree
+  {- Strictness: m2,
+     Unfolding: (Test.Tasty.Core.TestGroup Main.tests19 Main.tests7) -}
+b3392803f582a0187b01364805cd8f0a
+  tests60 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests62
+                   Main.tests61
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R <Tortoise.Instructions
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          Tortoise.Instructions>_R
+                                                       ->_R <GHC.Show.Show Tortoise.Instructions>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <Tortoise.Instructions
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <Tortoise.Instructions -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+724f7402aadcd170ea9f011d8cb1f3ef
+  tests61 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <S(SSSSLL),1*U(U,U,U,1*U,A,A)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Test.QuickCheck.Random.QCGen) (w1 :: GHC.Types.Int) ->
+                 case w `cast`
+                      (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 Main.$wtests8 ww1 ww2 ww3 ww4 w1 }) -}
+16e11e76f30ea871beb2edf994cbe980
+  tests62 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests63) -}
+57a99db278bed0368dfba107a15f8265
+  tests63 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("left identity"#) -}
+8ec029ad2dae692d0125d5cd7468040d
+  tests64 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests65) -}
+4047cf88a8bf416d8f114ef7d61bff3d
+  tests65 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Monoid Laws"#) -}
+00d6040243a37926d11c3c9ca60a66a9
+  tests66 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests67) -}
+393934651b2fa532515137db2686e18c
+  tests67 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("andThen"#) -}
+a7c431bdac0f02df06ca78e0dd150f7b
+  tests68 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.tests69) -}
+38ac9c5eefb69664f439e7b9ed23aef2
+  tests69 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("tests"#) -}
+ccd0c7f8bb3cd0eb914115dd8b01cf50
+  tests7 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests15
+                   Main.tests8) -}
+4a9dd513199cb90768da9c70386119bf
+  tests8 :: [Test.Tasty.Core.TestTree]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Tasty.Core.TestTree
+                   Main.tests9
+                   (GHC.Types.[] @ Test.Tasty.Core.TestTree)) -}
+f65e9071d1ec418a3e54fe132c118311
+  tests9 :: Test.Tasty.Core.TestTree
+  {- Unfolding: (Test.Tasty.Core.SingleTest
+                   @ Test.Tasty.QuickCheck.QC
+                   Test.Tasty.QuickCheck.$fIsTestQC
+                   Main.tests13
+                   Main.tests10
+                     `cast`
+                   (Trans
+                        (Nth:3
+                             (Trans
+                                  (Nth:3
+                                       (Nth:3
+                                            (Nth:3
+                                                 (Trans
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          [Tortoise.Instructions]>_R
+                                                       ->_R <GHC.Show.Show
+                                                               [Tortoise.Instructions]>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R <[Tortoise.Instructions]
+                                                             -> GHC.Types.Bool>_R
+                                                       ->_R Trans
+                                                                (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                                                          (Test.QuickCheck.Property.N:Prop[0])))
+                                                                (Sym (Test.QuickCheck.Property.N:Property[0])))
+                                                      (<Test.QuickCheck.Arbitrary.Arbitrary
+                                                          [Tortoise.Instructions]>_R
+                                                       ->_R <GHC.Show.Show
+                                                               [Tortoise.Instructions]>_R
+                                                       ->_R <Test.QuickCheck.Property.Testable
+                                                               GHC.Types.Bool>_R
+                                                       ->_R Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                     <[Tortoise.Instructions]
+                                                                      -> GHC.Types.Bool>_N))))))
+                                  (Test.QuickCheck.Property.N:Testable[0]
+                                       <[Tortoise.Instructions] -> GHC.Types.Bool>_N)))
+                        (Sym (Test.Tasty.QuickCheck.N:QC[0])))) -}
+"SPEC/Main $fShow[] @ Instructions" [orphan] forall (v :: GHC.Show.Show
+                                                            Tortoise.Instructions)
+  GHC.Show.$fShow[] @ Tortoise.Instructions v = Main.$s$fShow[]
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

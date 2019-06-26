@@ -1,0 +1,399 @@
+
+==================== FINAL INTERFACE ====================
+2019-06-24 05:34:32.728819 UTC
+
+interface main:Main 8022
+  interface hash: 849e073e74e93b647fc3ca2fb6573227
+  ABI hash: ae8445a3f4f96cca1c706b0bdc0d7060
+  export-list hash: b3d556c6284c31e16b5a3084acd43bbf
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 7c539402ee09adf834e24fd1b4df81eb
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.circle
+  Main.circlograph
+  Main.circlographograph
+  Main.ex1
+  Main.ex2
+  Main.ex3
+  Main.ex4
+  Main.ex5
+  Main.ex6
+  Main.ex7
+  Main.flower
+  Main.flowerograph
+  Main.flowers
+  Main.flowers'
+  Main.main
+  Main.polygon
+  Main.square
+  Main.squareograph
+module dependencies: Tortoise TortoiseCombinators TortoiseGraphics
+package dependencies: FontyFruity-0.5.3.3 JuicyPixels-3.2.9.3
+                      Rasterific-0.7.2.1 StateVar-1.1.0.4 array-0.5.2.0 base-4.10.1.0
+                      base-orphans-0.6 bifunctors-5.5 binary-0.8.5.1 bytestring-0.10.8.2
+                      comonad-5.0.2 containers-0.5.10.2 contravariant-1.4 deepseq-1.4.3.0
+                      directory-1.3.0.2 distributive-0.5.3 dlist-0.8.0.3 exceptions-0.8.3
+                      filepath-1.4.1.2 free-4.12.4 ghc-boot-th-8.2.2 ghc-prim-0.5.1.1
+                      hashable-1.2.6.1 integer-gmp-1.0.1.0 mtl-2.2.1
+                      prelude-extras-0.4.0.3 primitive-0.6.2.0 profunctors-5.2.1
+                      semigroupoids-5.2.1 stm-2.4.4.1 tagged-0.8.5
+                      template-haskell-2.12.0.0 text-1.2.2.2 time-1.8.0.2
+                      transformers-0.5.2.0 transformers-compat-0.5.1.4 unix-2.7.2.2
+                      unordered-containers-0.2.8.0 vector-0.12.0.1
+                      vector-algorithms-0.7.0.1 xml-1.3.14 zlib-0.6.1.2
+orphans: stm-2.4.4.1:Control.Monad.STM
+         hashable-1.2.6.1:Data.Hashable.Generic
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         text-1.2.2.2:Data.Text.Lazy text-1.2.2.2:Data.Text
+         text-1.2.2.2:Data.Text.Show binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         vector-0.12.0.1:Data.Vector.Unboxed
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: JuicyPixels-3.2.9.3:Codec.Picture.Tga
+                         JuicyPixels-3.2.9.3:Codec.Picture.Tiff
+                         JuicyPixels-3.2.9.3:Codec.Picture.Types
+                         Rasterific-0.7.2.1:Graphics.Rasterific.Compositor
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats bifunctors-5.5:Data.Bifunctor.Biff
+                         bifunctors-5.5:Data.Bifunctor.Clown
+                         bifunctors-5.5:Data.Bifunctor.Flip
+                         bifunctors-5.5:Data.Bifunctor.Join
+                         bifunctors-5.5:Data.Bifunctor.Joker
+                         bifunctors-5.5:Data.Bifunctor.Product
+                         bifunctors-5.5:Data.Bifunctor.Sum
+                         bifunctors-5.5:Data.Bifunctor.Tannen
+                         bifunctors-5.5:Data.Bifunctor.Wrapped
+                         containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         dlist-0.8.0.3:Data.DList ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         primitive-0.6.2.0:Control.Monad.Primitive
+                         primitive-0.6.2.0:Data.Primitive.Array tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2:Data.Text text-1.2.2.2:Data.Text.Lazy
+                         unordered-containers-0.2.8.0:Data.HashMap.Base
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+                         zlib-0.6.1.2:Codec.Compression.Zlib.Stream
+import  -/  JuicyPixels-3.2.9.3:Codec.Picture.Png.Export cfc9089acce628c4080c83c566b18ebb
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Real 3c62834bc25e762eabc44149c4cc142d
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  integer-gmp-1.0.1.0:GHC.Integer.Type 5fa81108482c33b62ec3ac7464eece96
+import  -/  Tortoise b1059e1036400af094eb900238a21641
+  exports: 17bb42b7abb4b8f657ba026147798592
+  Distance b7fa590ff6b97eb87414748743af94f0
+  Instructions da54e1c72fc39648f154ea8046be7b10
+  Move 1c11e679b0f31ed289fcfaac5c620661
+  PenDown 2e29a2694829a6b8d9b34fbe90c567d3
+  PenUp 9a17290b52cd724e4ec156284b2aec30
+  SetColour 9c707e0dc97e363d4ce5f3b36fc5dfc4
+  SetStyle af735bdc390176ca1e9e9a0270e813c8
+  Solid 22a82b2f52cf8732b26faf84e54cfb86
+  Stop 720ff061e412743d5941dee996ca3497
+  Turn 4f995b66f8feb55668f43d914079042f
+  blueC d78a8b42b180e9e5e81fef69d389b64d
+  brown 103feaccc8cd73b48f6e7a0c620300c2
+  greenC d78a8b42b180e9e5e81fef69d389b64d
+  redC d78a8b42b180e9e5e81fef69d389b64d
+  tortoisePic ad6091a5b5be6ed3c3b5954609f63863
+  white 915994a821cec26787d7a05791bd5895
+  yellow 660f41d9fb328bb4973b5d067d2d66bf
+import  -/  TortoiseCombinators 14ec04594d957d3df4abbd580cc602e4
+  exports: 735a505de1f9270ae5e1398b77de11fc
+  andThen 7e944ba76d6b7ad2e6ee62cc449a3a33
+  invisibly 1d0fbb2818d4cb37b3c87e1423721de3
+  loop a615631aa6244c0e4907d6d44a20c810
+  overlay aee0a8f1e46c623fa99a25a4bee5b832
+  retrace 24b9f72963e080cca64723f447706789
+import  -/  TortoiseGraphics fbf1cd73e1152a3fab519c9073e9ce84
+  exports: 395495c241010dd01e419849fdad3280
+  drawPicture 0616a401492245fe19f1cc1fe5910b7d
+9d72b2fddb818bcd8919052935e0f1f3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+3108ceeaf5a318be844de422b45de9d8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+33bd129667974f0a0ba4a893af79107d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+246941271ae05cdc3c946c9d6d0278cc
+  circle :: Tortoise.Instructions
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True) TortoiseCombinators.loop1 -}
+9f56061911324c7cdc03d3b98244953b
+  circlograph :: Tortoise.Instructions
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True) TortoiseCombinators.loop1 -}
+93106b8e45616e1d52a1eb1e6a6ddeda
+  circlographograph :: Tortoise.Instructions
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                TortoiseCombinators.overlay1 -}
+2d3712ef648ec5f9e071a070e9dbca79
+  ex1 :: Tortoise.Instructions
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Tortoise.Move Main.ex1_s Main.ex11) -}
+3fae6da5a4e6935edd10f0ac4e8127d9
+  ex11 :: Tortoise.Instructions
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Tortoise.Turn Main.ex18 Main.ex12) -}
+4e3bc505df7c9b6e746a12eaeeffb962
+  ex12 :: Tortoise.Instructions
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Tortoise.Move Main.ex1_s Main.ex13) -}
+c0c59f8f9c8022da7935db85e909cdd2
+  ex13 :: Tortoise.Instructions
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Tortoise.Turn Main.ex18 Main.ex14) -}
+e00a227dd753df684775f8eb7d424d6d
+  ex14 :: Tortoise.Instructions
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Tortoise.Move Main.ex1_s Main.ex15) -}
+e757557657767630e2ba6b46259b6c97
+  ex15 :: Tortoise.Instructions
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Tortoise.Turn Main.ex18 Main.ex16) -}
+c7d59f50f6477bd3a93aaa414d2e7769
+  ex16 :: Tortoise.Instructions
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Tortoise.Move Main.ex1_s Main.ex17) -}
+1dc2c87ae3c01a41575a1d1cc65c0f51
+  ex17 :: Tortoise.Instructions
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Tortoise.Turn Main.ex18 Tortoise.Stop) -}
+86f5771e7e5b7e9c7167e0f6652d836e
+  ex18 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (90) -}
+ef8d36202db4a079359047926a838af4
+  ex19 :: Tortoise.Instructions
+  {- Strictness: m3,
+     Unfolding: (Tortoise.SetStyle Main.ex26 Main.ex20) -}
+562d351fb5ea6fecac18dd45cbfc8175
+  ex1_s :: Tortoise.Distance
+  {- HasNoCafRefs, Unfolding: (100) -}
+246d6680a81e5ccbc7492a59fe4c6769
+  ex2 :: Tortoise.Instructions
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True) TortoiseCombinators.loop1 -}
+6838b93692bdf9152a8318c771c44fd8
+  ex20 :: Tortoise.Instructions
+  {- Strictness: m1,
+     Unfolding: (Tortoise.Move Main.ex25 Main.ex21) -}
+0cc52dfc3ee1afc0256a5edd291cbf9e
+  ex21 :: Tortoise.Instructions
+  {- Strictness: m3,
+     Unfolding: (Tortoise.SetStyle Main.ex23 Main.ex22) -}
+85148c4b798461ca650be93396f4a34a
+  ex22 :: Tortoise.Instructions
+  {- Strictness: m4,
+     Unfolding: (Tortoise.SetColour
+                   Tortoise.yellow
+                   TortoiseCombinators.loop1) -}
+53b101679ab292cd5d3172b28d7bb673
+  ex23 :: Tortoise.LineStyle
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Tortoise.Solid Main.ex24) -}
+2c769acae05ade25a1d5b19130d6da5a
+  ex24 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+dacb362621afafb32a442fa12c9465c1
+  ex25 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (300) -}
+7e42295c0674046c248ff83e366bfa7d
+  ex26 :: Tortoise.LineStyle
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Tortoise.Solid Main.ex27) -}
+00d0f303431ba693e0f0e9f73bdc66e1
+  ex27 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
+670e18549cadfddab077d659b23877f7
+  ex28 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (45) -}
+30506cb25cc01884e5afa11f0a4227c3
+  ex3 :: Tortoise.Instructions
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True) TortoiseCombinators.loop1 -}
+6834aff23c730bad1bb1c02ee3a543ed
+  ex4 :: Tortoise.Instructions
+  {- Strictness: m4,
+     Unfolding: (Tortoise.SetColour Tortoise.brown Main.ex19) -}
+5eb5452c0c4db81d91c64b12018c0490
+  ex5 :: Tortoise.Instructions
+  {- Strictness: m2,
+     Unfolding: (Tortoise.Turn
+                   Main.ex28
+                   TortoiseCombinators.andThen1) -}
+313843c8255789bf4baed367c4b0b939
+  ex6 :: Tortoise.Instructions
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                TortoiseCombinators.overlay1 -}
+1165d4192f611839bb4f992fce316fcc
+  ex7 :: Tortoise.Instructions
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True)
+                TortoiseCombinators.overlay1 -}
+d2968011492a63d069f6d5bd84f0e5bd
+  flower :: Tortoise.Instructions -> Tortoise.Instructions
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m4,
+     Unfolding: InlineRule (1, True, False)
+                (\ (top :: Tortoise.Instructions) ->
+                 Tortoise.SetColour
+                   Tortoise.brown
+                   (Tortoise.SetStyle
+                      Main.ex26
+                      (Tortoise.Move
+                         Main.ex25
+                         (Tortoise.SetStyle
+                            Main.ex23
+                            (Tortoise.SetColour Tortoise.yellow top))))) -}
+4f64676a923e3bdff7bb208b251c3527
+  flowerograph :: Tortoise.Instructions -> Tortoise.Instructions
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (top :: Tortoise.Instructions) ->
+                 TortoiseCombinators.overlay1) -}
+7ca8d1b6e4a045967878ba02590bb34a
+  flowers :: Tortoise.Instructions -> Tortoise.Instructions
+  {- Arity: 1, Strictness: <L,A>m2,
+     Unfolding: InlineRule (1, True, True)
+                (\ (top :: Tortoise.Instructions) -> Main.ex5) -}
+3821f654962c230c20268982f9a654df
+  flowers' :: Tortoise.Instructions -> Tortoise.Instructions
+  {- Arity: 1, Strictness: <B,A>x,
+     Unfolding: InlineRule (1, True, True)
+                (\ (top :: Tortoise.Instructions) ->
+                 TortoiseCombinators.overlay1) -}
+257f7185aec478bfb543e67614c14cc8
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f02731747efcb83c1671da86d00f35c8
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 System.IO.withBinaryFile1
+                   @ ()
+                   Main.main4
+                   GHC.IO.IOMode.WriteMode
+                   Main.main2
+                     `cast`
+                   (<GHC.IO.Handle.Types.Handle>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   eta) -}
+f4791e5e2a16547e3143b2904af6eec9
+  main2 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (ds :: GHC.IO.Handle.Types.Handle)[OneShot]
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case TortoiseGraphics.drawPicture
+                        Main.main3 of ww { Codec.Picture.Types.Image ww1 ww2 ww3 ->
+                 Data.ByteString.Lazy.appendFile2
+                   ds
+                   (Codec.Picture.Png.Export.$w$sgenericEncodePng2
+                      (GHC.Base.Nothing @ Codec.Picture.Types.Palette)
+                      (GHC.Base.Nothing @ Codec.Picture.Png.Export.PaletteAlpha)
+                      Codec.Picture.Png.Type.PngTrueColourWithAlpha
+                      (GHC.Types.[]
+                         @ (Codec.Picture.Metadata.Elem Codec.Picture.Metadata.Keys))
+                        `cast`
+                      (Sym (Codec.Picture.Metadata.N:Metadatas[0]))
+                      ww1
+                      ww2
+                      ww3)
+                   eta1 }) -}
+004e03f7afa3463a691f427dbe0bcb81
+  main3 :: Tortoise.Picture
+  {- Unfolding: (case Tortoise.$wtortoise
+                        Main.ex1
+                        Tortoise.start of ww { (#,#) ww1 ww2 ->
+                 ww1 }) -}
+4923bea4e318ea49761a1149085ef9ef
+  main4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main5) -}
+bd346b98064519ff9bf5fe679d9694c6
+  main5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("tortoise.png"#) -}
+8fa38689d4f941d1bff4ef69da1c8b75
+  main6 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+de6d962f5bee735a83f9e4c594830957
+  polygon ::
+    GHC.Types.Int -> GHC.Integer.Type.Integer -> Tortoise.Instructions
+  {- Arity: 2, Strictness: <B,A><B,A>x,
+     Unfolding: InlineRule (2, True, True)
+                (\ (s :: GHC.Types.Int) (n :: GHC.Integer.Type.Integer) ->
+                 TortoiseCombinators.loop1) -}
+250e4ee0c591b9226bb8002846bfa4ca
+  square :: Tortoise.Distance -> Tortoise.Instructions
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Tortoise.Distance) ->
+                 Tortoise.Move
+                   s
+                   (Tortoise.Turn
+                      Main.ex18
+                      (Tortoise.Move
+                         s
+                         (Tortoise.Turn
+                            Main.ex18
+                            (Tortoise.Move
+                               s
+                               (Tortoise.Turn Main.ex18 (Tortoise.Move s Main.ex17))))))) -}
+e376a756286741612faeafeab4749fe9
+  squareograph :: Tortoise.Instructions
+  {- Strictness: x,
+     Unfolding: InlineRule (0, True, True) TortoiseCombinators.loop1 -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

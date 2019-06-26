@@ -1,0 +1,1425 @@
+
+==================== FINAL INTERFACE ====================
+2019-06-24 05:34:32.476436 UTC
+
+interface main:TortoiseGraphics 8022
+  interface hash: 7a328eb945ea1935bf92fad547bfe224
+  ABI hash: fbf1cd73e1152a3fab519c9073e9ce84
+  export-list hash: 395495c241010dd01e419849fdad3280
+  orphan hash: c5600b9db9c1e9cb35025d72584bd157
+  flag hash: 96cd2b9604fa7a6d6c0af69efb3ebdff
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Codec.Picture.Png.Export.writePng
+  TortoiseGraphics.drawPicture
+module dependencies: Tortoise
+package dependencies: FontyFruity-0.5.3.3 JuicyPixels-3.2.9.3
+                      Rasterific-0.7.2.1 StateVar-1.1.0.4 array-0.5.2.0 base-4.10.1.0
+                      base-orphans-0.6 bifunctors-5.5 binary-0.8.5.1 bytestring-0.10.8.2
+                      comonad-5.0.2 containers-0.5.10.2 contravariant-1.4 deepseq-1.4.3.0
+                      directory-1.3.0.2 distributive-0.5.3 dlist-0.8.0.3 exceptions-0.8.3
+                      filepath-1.4.1.2 free-4.12.4 ghc-boot-th-8.2.2 ghc-prim-0.5.1.1
+                      hashable-1.2.6.1 integer-gmp-1.0.1.0 mtl-2.2.1
+                      prelude-extras-0.4.0.3 primitive-0.6.2.0 profunctors-5.2.1
+                      semigroupoids-5.2.1 stm-2.4.4.1 tagged-0.8.5
+                      template-haskell-2.12.0.0 text-1.2.2.2 time-1.8.0.2
+                      transformers-0.5.2.0 transformers-compat-0.5.1.4 unix-2.7.2.2
+                      unordered-containers-0.2.8.0 vector-0.12.0.1
+                      vector-algorithms-0.7.0.1 xml-1.3.14 zlib-0.6.1.2
+orphans: stm-2.4.4.1:Control.Monad.STM
+         hashable-1.2.6.1:Data.Hashable.Generic
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         text-1.2.2.2:Data.Text.Lazy text-1.2.2.2:Data.Text
+         text-1.2.2.2:Data.Text.Show binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         vector-0.12.0.1:Data.Vector.Unboxed
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: JuicyPixels-3.2.9.3:Codec.Picture.Tga
+                         JuicyPixels-3.2.9.3:Codec.Picture.Tiff
+                         JuicyPixels-3.2.9.3:Codec.Picture.Types
+                         Rasterific-0.7.2.1:Graphics.Rasterific.Compositor
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats bifunctors-5.5:Data.Bifunctor.Biff
+                         bifunctors-5.5:Data.Bifunctor.Clown
+                         bifunctors-5.5:Data.Bifunctor.Flip
+                         bifunctors-5.5:Data.Bifunctor.Join
+                         bifunctors-5.5:Data.Bifunctor.Joker
+                         bifunctors-5.5:Data.Bifunctor.Product
+                         bifunctors-5.5:Data.Bifunctor.Sum
+                         bifunctors-5.5:Data.Bifunctor.Tannen
+                         bifunctors-5.5:Data.Bifunctor.Wrapped
+                         containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         dlist-0.8.0.3:Data.DList ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         primitive-0.6.2.0:Control.Monad.Primitive
+                         primitive-0.6.2.0:Data.Primitive.Array tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2:Data.Text text-1.2.2.2:Data.Text.Lazy
+                         unordered-containers-0.2.8.0:Data.HashMap.Base
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+                         zlib-0.6.1.2:Codec.Compression.Zlib.Stream
+import  -/  JuicyPixels-3.2.9.3:Codec.Picture b8bf14608356c81bf4ae7e450f842d9c
+import  -/  JuicyPixels-3.2.9.3:Codec.Picture.Types 84a22b7919cb9551d5c10457f7c4f9bf
+import  -/  Rasterific-0.7.2.1:Graphics.Rasterific b87418074ece7a4904dd52980408fcfe
+import  -/  Rasterific-0.7.2.1:Graphics.Rasterific.Command 64497a8b1c6736893ba9408af489fafa
+import  -/  Rasterific-0.7.2.1:Graphics.Rasterific.Linear 41e15a3ab7b3e0c03ee10a7259e255d1
+import  -/  Rasterific-0.7.2.1:Graphics.Rasterific.Texture 3c5d2818122da2d9181d68a095c2fc6d
+import  -/  Rasterific-0.7.2.1:Graphics.Rasterific.Types 7777d652dd25e2f31de6317a2ee5b45c
+import  -/  base-4.10.1.0:Data.Traversable 60ea7c2973e63de7d08d5d0269f96e67
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Real 3c62834bc25e762eabc44149c4cc142d
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  Tortoise b1059e1036400af094eb900238a21641
+  exports: 17bb42b7abb4b8f657ba026147798592
+  Colour 167a7061348e5b2220c43b280b80eaab
+  Dashed 67f982bb47801197f86bbc990af235fa
+  Dotted 56c69bd6518c7713667e7435e4a7560c
+  Line b7ac49d0497b598bc25ce98bbeb296ee
+  LineStyle 9040f192270b954aaff8da1757a91712
+  Picture 6f5b4c1ae93774f34e94f3127a2fe637
+  Solid 22a82b2f52cf8732b26faf84e54cfb86
+a66568956197760fdfa9374051b2df62
+  $s$fNumV1 ::
+    GHC.Num.Num (Graphics.Rasterific.Linear.V1 GHC.Types.Float)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (Graphics.Rasterific.Linear.V1 GHC.Types.Float)
+                  GHC.Float.plusFloat
+                    `cast`
+                  (Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R))
+                  GHC.Float.minusFloat
+                    `cast`
+                  (Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R))
+                  GHC.Float.timesFloat
+                    `cast`
+                  (Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R))
+                  GHC.Float.negateFloat
+                    `cast`
+                  (Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R))
+                  GHC.Float.fabsFloat
+                    `cast`
+                  (Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R))
+                  GHC.Float.$fNumFloat_$csignum
+                    `cast`
+                  (Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R)
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0] <GHC.Types.Float>_R))
+                  GHC.Float.$fNumFloat_$cfromInteger
+                    `cast`
+                  (<GHC.Integer.Type.Integer>_R
+                   ->_R Sym (Graphics.Rasterific.Linear.N:V1[0]
+                                 <GHC.Types.Float>_R)) -}
+6c9315aa6e0a29b2c718393832557545
+  $s$fNumV4 ::
+    GHC.Num.Num (Graphics.Rasterific.Linear.V4 GHC.Types.Float)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (Graphics.Rasterific.Linear.V4 GHC.Types.Float)
+                  TortoiseGraphics.$s$fNumV4_$s$fNumV4_$c+
+                  TortoiseGraphics.$s$fNumV4_$s$fNumV4_$c-
+                  TortoiseGraphics.$s$fNumV4_$s$fNumV4_$c*
+                  TortoiseGraphics.$s$fNumV4_$s$fNumV4_$cnegate
+                  TortoiseGraphics.$s$fNumV4_$s$fNumV4_$cabs
+                  TortoiseGraphics.$s$fNumV4_$s$fNumV4_$csignum
+                  (\ (x :: GHC.Integer.Type.Integer) ->
+                   let {
+                     a1 :: GHC.Types.Float
+                     = case GHC.Integer.Type.doubleFromInteger x of wild2 { DEFAULT ->
+                       GHC.Types.F# (GHC.Prim.double2Float# wild2) }
+                   } in
+                   Graphics.Rasterific.Linear.$WV4 @ GHC.Types.Float a1 a1 a1 a1) -}
+cc613a1b9f3506ec7d24c79d8a64fe8e
+  $s$fNumV4_$s$fNumV4_$c* ::
+    Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SSSS),1*U(U(U),U(U),U(U),U(U))><S(SSSS),1*U(U(U),U(U),U(U),U(U))>m,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (ds :: Graphics.Rasterific.Linear.V4 GHC.Types.Float)
+                   (ds1 :: Graphics.Rasterific.Linear.V4 GHC.Types.Float) ->
+                 case ds of wild { Graphics.Rasterific.Linear.V4 a1 b c d ->
+                 case ds1 of wild1 { Graphics.Rasterific.Linear.V4 a' b' c' d' ->
+                 case a1 of wild2 { GHC.Types.F# x ->
+                 case a' of wild3 { GHC.Types.F# y ->
+                 case b of wild4 { GHC.Types.F# x1 ->
+                 case b' of wild5 { GHC.Types.F# y1 ->
+                 case c of wild6 { GHC.Types.F# x2 ->
+                 case c' of wild7 { GHC.Types.F# y2 ->
+                 case d of wild8 { GHC.Types.F# x3 ->
+                 case d' of wild9 { GHC.Types.F# y3 ->
+                 Graphics.Rasterific.Linear.$WV4
+                   @ GHC.Types.Float
+                   (GHC.Types.F# (GHC.Prim.timesFloat# x y))
+                   (GHC.Types.F# (GHC.Prim.timesFloat# x1 y1))
+                   (GHC.Types.F# (GHC.Prim.timesFloat# x2 y2))
+                   (GHC.Types.F# (GHC.Prim.timesFloat# x3 y3)) } } } } } } } } } }) -}
+04b736bc0076f89a2b43fb38fe53b8c2
+  $s$fNumV4_$s$fNumV4_$c+ ::
+    Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SSSS),1*U(U(U),U(U),U(U),U(U))><S(SSSS),1*U(U(U),U(U),U(U),U(U))>m,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (ds :: Graphics.Rasterific.Linear.V4 GHC.Types.Float)
+                   (ds1 :: Graphics.Rasterific.Linear.V4 GHC.Types.Float) ->
+                 case ds of wild { Graphics.Rasterific.Linear.V4 a1 b c d ->
+                 case ds1 of wild1 { Graphics.Rasterific.Linear.V4 a' b' c' d' ->
+                 case a1 of wild2 { GHC.Types.F# x ->
+                 case a' of wild3 { GHC.Types.F# y ->
+                 case b of wild4 { GHC.Types.F# x1 ->
+                 case b' of wild5 { GHC.Types.F# y1 ->
+                 case c of wild6 { GHC.Types.F# x2 ->
+                 case c' of wild7 { GHC.Types.F# y2 ->
+                 case d of wild8 { GHC.Types.F# x3 ->
+                 case d' of wild9 { GHC.Types.F# y3 ->
+                 Graphics.Rasterific.Linear.$WV4
+                   @ GHC.Types.Float
+                   (GHC.Types.F# (GHC.Prim.plusFloat# x y))
+                   (GHC.Types.F# (GHC.Prim.plusFloat# x1 y1))
+                   (GHC.Types.F# (GHC.Prim.plusFloat# x2 y2))
+                   (GHC.Types.F# (GHC.Prim.plusFloat# x3 y3)) } } } } } } } } } }) -}
+b0846e3ef63cef18e37137aaea1627d1
+  $s$fNumV4_$s$fNumV4_$c- ::
+    Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SSSS),1*U(U(U),U(U),U(U),U(U))><S(SSSS),1*U(U(U),U(U),U(U),U(U))>m,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (ds :: Graphics.Rasterific.Linear.V4 GHC.Types.Float)
+                   (ds1 :: Graphics.Rasterific.Linear.V4 GHC.Types.Float) ->
+                 case ds of wild { Graphics.Rasterific.Linear.V4 a1 b c d ->
+                 case ds1 of wild1 { Graphics.Rasterific.Linear.V4 a' b' c' d' ->
+                 case a1 of wild2 { GHC.Types.F# x ->
+                 case a' of wild3 { GHC.Types.F# y ->
+                 case b of wild4 { GHC.Types.F# x1 ->
+                 case b' of wild5 { GHC.Types.F# y1 ->
+                 case c of wild6 { GHC.Types.F# x2 ->
+                 case c' of wild7 { GHC.Types.F# y2 ->
+                 case d of wild8 { GHC.Types.F# x3 ->
+                 case d' of wild9 { GHC.Types.F# y3 ->
+                 Graphics.Rasterific.Linear.$WV4
+                   @ GHC.Types.Float
+                   (GHC.Types.F# (GHC.Prim.minusFloat# x y))
+                   (GHC.Types.F# (GHC.Prim.minusFloat# x1 y1))
+                   (GHC.Types.F# (GHC.Prim.minusFloat# x2 y2))
+                   (GHC.Types.F# (GHC.Prim.minusFloat# x3 y3)) } } } } } } } } } }) -}
+564b39781c928fd55fcedd1b955d516c
+  $s$fNumV4_$s$fNumV4_$cabs ::
+    Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SSSS),1*U(U(U),U(U),U(U),U(U))>m,
+     Inline: (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (ds :: Graphics.Rasterific.Linear.V4 GHC.Types.Float) ->
+                 case ds of wild { Graphics.Rasterific.Linear.V4 a1 b c d ->
+                 case a1 of wild2 { GHC.Types.F# x ->
+                 case b of wild1 { GHC.Types.F# x1 ->
+                 case c of wild3 { GHC.Types.F# x2 ->
+                 case d of wild4 { GHC.Types.F# x3 ->
+                 Graphics.Rasterific.Linear.$WV4
+                   @ GHC.Types.Float
+                   (GHC.Types.F# (GHC.Prim.fabsFloat# x))
+                   (GHC.Types.F# (GHC.Prim.fabsFloat# x1))
+                   (GHC.Types.F# (GHC.Prim.fabsFloat# x2))
+                   (GHC.Types.F# (GHC.Prim.fabsFloat# x3)) } } } } }) -}
+8cf380fa6fdf10794eb94c506975b079
+  $s$fNumV4_$s$fNumV4_$cnegate ::
+    Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SSSS),1*U(U(U),U(U),U(U),U(U))>m,
+     Inline: (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (ds :: Graphics.Rasterific.Linear.V4 GHC.Types.Float) ->
+                 case ds of wild { Graphics.Rasterific.Linear.V4 a1 b c d ->
+                 case a1 of wild2 { GHC.Types.F# x ->
+                 case b of wild1 { GHC.Types.F# x1 ->
+                 case c of wild3 { GHC.Types.F# x2 ->
+                 case d of wild4 { GHC.Types.F# x3 ->
+                 Graphics.Rasterific.Linear.$WV4
+                   @ GHC.Types.Float
+                   (GHC.Types.F# (GHC.Prim.negateFloat# x))
+                   (GHC.Types.F# (GHC.Prim.negateFloat# x1))
+                   (GHC.Types.F# (GHC.Prim.negateFloat# x2))
+                   (GHC.Types.F# (GHC.Prim.negateFloat# x3)) } } } } }) -}
+30414df0160f967694d9b1dca6d1e251
+  $s$fNumV4_$s$fNumV4_$csignum ::
+    Graphics.Rasterific.Linear.V4 GHC.Types.Float
+    -> Graphics.Rasterific.Linear.V4 GHC.Types.Float
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(S)S(S)S(S)S(S)),1*U(U(U),U(U),U(U),U(U))>m,
+     Inline: (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ (ds :: Graphics.Rasterific.Linear.V4 GHC.Types.Float) ->
+                 case ds of wild { Graphics.Rasterific.Linear.V4 a1 b c d ->
+                 case a1 of wild2 { GHC.Types.F# x1 ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.gtFloat# x1 0.0#) of wild3 {
+                   GHC.Types.False
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.ltFloat# x1 0.0#) of wild4 {
+                        GHC.Types.False
+                        -> case b of wild1 { GHC.Types.F# x2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.gtFloat# x2 0.0#) of wild5 {
+                             GHC.Types.False
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.ltFloat# x2 0.0#) of wild6 {
+                                  GHC.Types.False
+                                  -> case c of wild7 { GHC.Types.F# x3 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x3 0.0#) of wild8 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x3 0.0#) of wild9 {
+                                            GHC.Types.False
+                                            -> case d of wild10 { GHC.Types.F# x4 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.gtFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.ltFloat# x4 0.0#) of wild12 {
+                                                      GHC.Types.False
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           wild2
+                                                           wild1
+                                                           wild7
+                                                           wild10
+                                                      GHC.Types.True
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           wild2
+                                                           wild1
+                                                           wild7
+                                                           GHC.Float.$fNumFloat2 }
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      wild1
+                                                      wild7
+                                                      GHC.Float.$fNumFloat1 } }
+                                            GHC.Types.True
+                                            -> case d of wild10 { GHC.Types.F# x4 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.gtFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.ltFloat# x4 0.0#) of wild12 {
+                                                      GHC.Types.False
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           wild2
+                                                           wild1
+                                                           GHC.Float.$fNumFloat2
+                                                           wild10
+                                                      GHC.Types.True
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           wild2
+                                                           wild1
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2 }
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      wild1
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1 } } }
+                                       GHC.Types.True
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      wild1
+                                                      GHC.Float.$fNumFloat1
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      wild1
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 wild2
+                                                 wild1
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1 } } } }
+                                  GHC.Types.True
+                                  -> case c of wild7 { GHC.Types.F# x3 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x3 0.0#) of wild8 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x3 0.0#) of wild9 {
+                                            GHC.Types.False
+                                            -> case d of wild10 { GHC.Types.F# x4 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.gtFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.ltFloat# x4 0.0#) of wild12 {
+                                                      GHC.Types.False
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           wild2
+                                                           GHC.Float.$fNumFloat2
+                                                           wild7
+                                                           wild10
+                                                      GHC.Types.True
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           wild2
+                                                           GHC.Float.$fNumFloat2
+                                                           wild7
+                                                           GHC.Float.$fNumFloat2 }
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      GHC.Float.$fNumFloat2
+                                                      wild7
+                                                      GHC.Float.$fNumFloat1 } }
+                                            GHC.Types.True
+                                            -> case d of wild10 { GHC.Types.F# x4 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.gtFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.ltFloat# x4 0.0#) of wild12 {
+                                                      GHC.Types.False
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           wild2
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2
+                                                           wild10
+                                                      GHC.Types.True
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           wild2
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2 }
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1 } } }
+                                       GHC.Types.True
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 wild2
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1 } } } } }
+                             GHC.Types.True
+                             -> case c of wild6 { GHC.Types.F# x3 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.gtFloat# x3 0.0#) of wild7 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.ltFloat# x3 0.0#) of wild8 {
+                                       GHC.Types.False
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      GHC.Float.$fNumFloat1
+                                                      wild6
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      GHC.Float.$fNumFloat1
+                                                      wild6
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 wild2
+                                                 GHC.Float.$fNumFloat1
+                                                 wild6
+                                                 GHC.Float.$fNumFloat1 } }
+                                       GHC.Types.True
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      wild2
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 wild2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1 } } }
+                                  GHC.Types.True
+                                  -> case d of wild8 { GHC.Types.F# x4 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x4 0.0#) of wild9 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 wild2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1
+                                                 wild8
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 wild2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2 }
+                                       GHC.Types.True
+                                       -> Graphics.Rasterific.Linear.$WV4
+                                            @ GHC.Types.Float
+                                            wild2
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1 } } } } } }
+                        GHC.Types.True
+                        -> case b of wild1 { GHC.Types.F# x2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.gtFloat# x2 0.0#) of wild5 {
+                             GHC.Types.False
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.ltFloat# x2 0.0#) of wild6 {
+                                  GHC.Types.False
+                                  -> case c of wild7 { GHC.Types.F# x3 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x3 0.0#) of wild8 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x3 0.0#) of wild9 {
+                                            GHC.Types.False
+                                            -> case d of wild10 { GHC.Types.F# x4 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.gtFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.ltFloat# x4 0.0#) of wild12 {
+                                                      GHC.Types.False
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           GHC.Float.$fNumFloat2
+                                                           wild1
+                                                           wild7
+                                                           wild10
+                                                      GHC.Types.True
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           GHC.Float.$fNumFloat2
+                                                           wild1
+                                                           wild7
+                                                           GHC.Float.$fNumFloat2 }
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      wild1
+                                                      wild7
+                                                      GHC.Float.$fNumFloat1 } }
+                                            GHC.Types.True
+                                            -> case d of wild10 { GHC.Types.F# x4 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.gtFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.ltFloat# x4 0.0#) of wild12 {
+                                                      GHC.Types.False
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           GHC.Float.$fNumFloat2
+                                                           wild1
+                                                           GHC.Float.$fNumFloat2
+                                                           wild10
+                                                      GHC.Types.True
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           GHC.Float.$fNumFloat2
+                                                           wild1
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2 }
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      wild1
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1 } } }
+                                       GHC.Types.True
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      wild1
+                                                      GHC.Float.$fNumFloat1
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      wild1
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat2
+                                                 wild1
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1 } } } }
+                                  GHC.Types.True
+                                  -> case c of wild7 { GHC.Types.F# x3 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x3 0.0#) of wild8 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x3 0.0#) of wild9 {
+                                            GHC.Types.False
+                                            -> case d of wild10 { GHC.Types.F# x4 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.gtFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.ltFloat# x4 0.0#) of wild12 {
+                                                      GHC.Types.False
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2
+                                                           wild7
+                                                           wild10
+                                                      GHC.Types.True
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2
+                                                           wild7
+                                                           GHC.Float.$fNumFloat2 }
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2
+                                                      wild7
+                                                      GHC.Float.$fNumFloat1 } }
+                                            GHC.Types.True
+                                            -> case d of wild10 { GHC.Types.F# x4 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.gtFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.ltFloat# x4 0.0#) of wild12 {
+                                                      GHC.Types.False
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2
+                                                           wild10
+                                                      GHC.Types.True
+                                                      -> Graphics.Rasterific.Linear.$WV4
+                                                           @ GHC.Types.Float
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2
+                                                           GHC.Float.$fNumFloat2 }
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1 } } }
+                                       GHC.Types.True
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1 } } } } }
+                             GHC.Types.True
+                             -> case c of wild6 { GHC.Types.F# x3 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.gtFloat# x3 0.0#) of wild7 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.ltFloat# x3 0.0#) of wild8 {
+                                       GHC.Types.False
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1
+                                                      wild6
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1
+                                                      wild6
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1
+                                                 wild6
+                                                 GHC.Float.$fNumFloat1 } }
+                                       GHC.Types.True
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1 } } }
+                                  GHC.Types.True
+                                  -> case d of wild8 { GHC.Types.F# x4 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x4 0.0#) of wild9 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1
+                                                 wild8
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2 }
+                                       GHC.Types.True
+                                       -> Graphics.Rasterific.Linear.$WV4
+                                            @ GHC.Types.Float
+                                            GHC.Float.$fNumFloat2
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1 } } } } } } }
+                   GHC.Types.True
+                   -> case b of wild1 { GHC.Types.F# x2 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.gtFloat# x2 0.0#) of wild5 {
+                        GHC.Types.False
+                        -> case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.ltFloat# x2 0.0#) of wild4 {
+                             GHC.Types.False
+                             -> case c of wild6 { GHC.Types.F# x3 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.gtFloat# x3 0.0#) of wild7 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.ltFloat# x3 0.0#) of wild8 {
+                                       GHC.Types.False
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat1
+                                                      wild1
+                                                      wild6
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat1
+                                                      wild1
+                                                      wild6
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 wild1
+                                                 wild6
+                                                 GHC.Float.$fNumFloat1 } }
+                                       GHC.Types.True
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat1
+                                                      wild1
+                                                      GHC.Float.$fNumFloat2
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat1
+                                                      wild1
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 wild1
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1 } } }
+                                  GHC.Types.True
+                                  -> case d of wild8 { GHC.Types.F# x4 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x4 0.0#) of wild9 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 wild1
+                                                 GHC.Float.$fNumFloat1
+                                                 wild8
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 wild1
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2 }
+                                       GHC.Types.True
+                                       -> Graphics.Rasterific.Linear.$WV4
+                                            @ GHC.Types.Float
+                                            GHC.Float.$fNumFloat1
+                                            wild1
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1 } } } }
+                             GHC.Types.True
+                             -> case c of wild6 { GHC.Types.F# x3 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.gtFloat# x3 0.0#) of wild7 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.ltFloat# x3 0.0#) of wild8 {
+                                       GHC.Types.False
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2
+                                                      wild6
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2
+                                                      wild6
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2
+                                                 wild6
+                                                 GHC.Float.$fNumFloat1 } }
+                                       GHC.Types.True
+                                       -> case d of wild9 { GHC.Types.F# x4 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.gtFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.ltFloat# x4 0.0#) of wild11 {
+                                                 GHC.Types.False
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2
+                                                      wild9
+                                                 GHC.Types.True
+                                                 -> Graphics.Rasterific.Linear.$WV4
+                                                      @ GHC.Types.Float
+                                                      GHC.Float.$fNumFloat1
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2
+                                                      GHC.Float.$fNumFloat2 }
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1 } } }
+                                  GHC.Types.True
+                                  -> case d of wild8 { GHC.Types.F# x4 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x4 0.0#) of wild9 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1
+                                                 wild8
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2 }
+                                       GHC.Types.True
+                                       -> Graphics.Rasterific.Linear.$WV4
+                                            @ GHC.Types.Float
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat2
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1 } } } } }
+                        GHC.Types.True
+                        -> case c of wild6 { GHC.Types.F# x3 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.gtFloat# x3 0.0#) of wild7 {
+                             GHC.Types.False
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.ltFloat# x3 0.0#) of wild4 {
+                                  GHC.Types.False
+                                  -> case d of wild8 { GHC.Types.F# x4 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x4 0.0#) of wild9 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1
+                                                 wild6
+                                                 wild8
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1
+                                                 wild6
+                                                 GHC.Float.$fNumFloat2 }
+                                       GHC.Types.True
+                                       -> Graphics.Rasterific.Linear.$WV4
+                                            @ GHC.Types.Float
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1
+                                            wild6
+                                            GHC.Float.$fNumFloat1 } }
+                                  GHC.Types.True
+                                  -> case d of wild8 { GHC.Types.F# x4 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.gtFloat# x4 0.0#) of wild9 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.ltFloat# x4 0.0#) of wild10 {
+                                            GHC.Types.False
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2
+                                                 wild8
+                                            GHC.Types.True
+                                            -> Graphics.Rasterific.Linear.$WV4
+                                                 @ GHC.Types.Float
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat1
+                                                 GHC.Float.$fNumFloat2
+                                                 GHC.Float.$fNumFloat2 }
+                                       GHC.Types.True
+                                       -> Graphics.Rasterific.Linear.$WV4
+                                            @ GHC.Types.Float
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat2
+                                            GHC.Float.$fNumFloat1 } } }
+                             GHC.Types.True
+                             -> case d of wild8 { GHC.Types.F# x4 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.gtFloat# x4 0.0#) of wild9 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.ltFloat# x4 0.0#) of wild4 {
+                                       GHC.Types.False
+                                       -> Graphics.Rasterific.Linear.$WV4
+                                            @ GHC.Types.Float
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1
+                                            wild8
+                                       GHC.Types.True
+                                       -> Graphics.Rasterific.Linear.$WV4
+                                            @ GHC.Types.Float
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat1
+                                            GHC.Float.$fNumFloat2 }
+                                  GHC.Types.True
+                                  -> Graphics.Rasterific.Linear.$WV4
+                                       @ GHC.Types.Float
+                                       GHC.Float.$fNumFloat1
+                                       GHC.Float.$fNumFloat1
+                                       GHC.Float.$fNumFloat1
+                                       GHC.Float.$fNumFloat1 } } } } } } } } }) -}
+340ee85cc05482135f8cddf01df91567
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   TortoiseGraphics.$trModule3
+                   TortoiseGraphics.$trModule1) -}
+5bb263ebb74382eefab67146fac6bb73
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TortoiseGraphics.$trModule2) -}
+6c8575acb427c9a3dcdb5351f2475121
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("TortoiseGraphics"#) -}
+bb629127e6c8e269da1eeb0b6c4096b9
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS TortoiseGraphics.$trModule4) -}
+8576d41720895d892f857e6c8e87e188
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+0616a401492245fe19f1cc1fe5910b7d
+  drawPicture ::
+    Tortoise.Picture
+    -> Codec.Picture.Types.Image Codec.Picture.Types.PixelRGBA8
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (picture :: Tortoise.Picture) ->
+                 Graphics.Rasterific.renderDrawingAtDpi
+                   @ Codec.Picture.Types.PixelRGBA8
+                   TortoiseGraphics.drawPicture3
+                     `cast`
+                   (GHC.Classes.(%,,,,,,,,%)
+                      (GHC.Classes.(%,,,,,%)
+                         <Codec.Picture.Types.Pixel Codec.Picture.Types.PixelRGBA8>_N
+                         <Codec.Picture.Types.PackeablePixel
+                            Codec.Picture.Types.PixelRGBA8>_N
+                         <Graphics.Rasterific.Compositor.InterpolablePixel
+                            Codec.Picture.Types.PixelRGBA8>_N
+                         (Graphics.Rasterific.Compositor.InterpolablePixel
+                            (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N
+                         (Foreign.Storable.Storable
+                            (Sym (Codec.Picture.Types.D:R:PackedRepresentationPixelRGBA8[0])))_N
+                         (Graphics.Rasterific.Compositor.Modulable
+                            (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N)_N
+                      (Codec.Picture.Types.Pixel
+                         (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N
+                      (Codec.Picture.Types.PackeablePixel
+                         (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N
+                      (GHC.Num.Num
+                         (Sym (Codec.Picture.Types.D:R:PackedRepresentationPixelRGBA8[0])))_N
+                      (GHC.Num.Num
+                         (Trans
+                              (Sym (Codec.Picture.Types.D:R:PackedRepresentationWord8[0]))
+                              (Codec.Picture.Types.PackedRepresentation
+                                 (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N))_N
+                      (GHC.Num.Num
+                         (Sym (Graphics.Rasterific.Compositor.D:R:HolderPixelRGBA8[0]) <GHC.Types.Float>_N))_N
+                      (GHC.Num.Num
+                         (Trans
+                              (Sym (Graphics.Rasterific.Compositor.D:R:HolderWord8[0]))
+                              (Graphics.Rasterific.Compositor.Holder
+                                 (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N <GHC.Types.Float>_N))_N
+                      (Foreign.Storable.Storable
+                         (Trans
+                              (Sym (Codec.Picture.Types.D:R:PackedRepresentationWord8[0]))
+                              (Codec.Picture.Types.PackedRepresentation
+                                 (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N))_N
+                      ((Data.Type.Equality.~)
+                         <*>_N
+                         (Trans
+                              (Sym (Codec.Picture.Types.D:R:PixelBaseComponentWord8[0]))
+                              (Codec.Picture.Types.PixelBaseComponent
+                                 (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N)
+                         (Sym (Codec.Picture.Types.D:R:PixelBaseComponentPixelRGBA8[0])))_N)_R
+                   TortoiseGraphics.drawPicture2
+                   TortoiseGraphics.drawPicture2
+                   Graphics.Rasterific.renderDrawing1
+                   TortoiseGraphics.drawPicture1
+                   (\ @ r
+                      (kp :: () -> r)[OneShot]
+                      (kf :: Graphics.Rasterific.Command.DrawCommand
+                               Codec.Picture.Types.PixelRGBA8 r
+                             -> r)[OneShot] ->
+                    let {
+                      lvl2 :: r = kp GHC.Tuple.()
+                    } in
+                    (TortoiseGraphics.drawPicture_go picture)
+                      `cast`
+                    (Control.Monad.Free.Church.N:F[0]
+                         <Graphics.Rasterific.Command.DrawCommand
+                            Codec.Picture.Types.PixelRGBA8>_R
+                         <[()]>_R)
+                      @ r
+                      (\ (a1 :: [()]) -> lvl2)
+                      kf)
+                     `cast`
+                   (Sym (Control.Monad.Free.Church.N:F[0]
+                             <Graphics.Rasterific.Command.DrawCommand
+                                Codec.Picture.Types.PixelRGBA8>_R
+                             <()>_R))) -}
+957c78581a7fd67f50bddc68464fbdb5
+  drawPicture1 :: Codec.Picture.Types.PixelRGBA8
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Codec.Picture.Types.PixelRGBA8 0## 0## 0## 255##) -}
+f39191cf062045ece13324ced75aaf09
+  drawPicture2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 800#) -}
+e4affdc6740320102db3b1d648a54c14
+  drawPicture3 ::
+    ((Codec.Picture.Types.Pixel Codec.Picture.Types.PixelRGBA8,
+      Codec.Picture.Types.PackeablePixel Codec.Picture.Types.PixelRGBA8,
+      Graphics.Rasterific.Compositor.InterpolablePixel
+        Codec.Picture.Types.PixelRGBA8,
+      Graphics.Rasterific.Compositor.InterpolablePixel GHC.Word.Word8,
+      Foreign.Storable.Storable GHC.Word.Word32,
+      Graphics.Rasterific.Compositor.Modulable GHC.Word.Word8),
+     Codec.Picture.Types.Pixel GHC.Word.Word8,
+     Codec.Picture.Types.PackeablePixel GHC.Word.Word8,
+     GHC.Num.Num GHC.Word.Word32,
+     GHC.Num.Num Codec.Picture.Types.Pixel8,
+     GHC.Num.Num (Graphics.Rasterific.Linear.V4 GHC.Types.Float),
+     GHC.Num.Num (Graphics.Rasterific.Linear.V1 GHC.Types.Float),
+     Foreign.Storable.Storable Codec.Picture.Types.Pixel8,
+     (GHC.Word.Word8 :: *) Data.Type.Equality.~ (GHC.Word.Word8 :: *))
+  {- Strictness: m,
+     Unfolding: ((TortoiseGraphics.drawPicture4,
+                  Codec.Picture.Types.$fPixelWord8,
+                  Codec.Picture.Types.$fPackeablePixelWord8, GHC.Word.$fNumWord32,
+                  GHC.Word.$fNumWord8, TortoiseGraphics.$s$fNumV4,
+                  TortoiseGraphics.$s$fNumV1, Foreign.Storable.$fStorableWord8,
+                  TortoiseGraphics.drawPicture_$d~~
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <GHC.Word.Word8>_N <GHC.Word.Word8>_N))) -}
+75b99e98cf91d8969f05a91257308b62
+  drawPicture4 ::
+    (Codec.Picture.Types.Pixel Codec.Picture.Types.PixelRGBA8,
+     Codec.Picture.Types.PackeablePixel Codec.Picture.Types.PixelRGBA8,
+     Graphics.Rasterific.Compositor.InterpolablePixel
+       Codec.Picture.Types.PixelRGBA8,
+     Graphics.Rasterific.Compositor.InterpolablePixel GHC.Word.Word8,
+     Foreign.Storable.Storable GHC.Word.Word32,
+     Graphics.Rasterific.Compositor.Modulable GHC.Word.Word8)
+  {- Strictness: m,
+     Unfolding: ((Codec.Picture.Types.$fPixelPixelRGBA8,
+                  Codec.Picture.Types.$fPackeablePixelPixelRGBA8,
+                  Graphics.Rasterific.Compositor.$fInterpolablePixelPixelRGBA8,
+                  Graphics.Rasterific.Compositor.$fInterpolablePixelWord8,
+                  Foreign.Storable.$fStorableWord32,
+                  Graphics.Rasterific.Compositor.$fModulableWord8)) -}
+60e3f67a57922460e611f6e8b681acf2
+  drawPicture_$d~~ ::
+    (GHC.Word.Word8 :: *) GHC.Types.~~ (GHC.Word.Word8 :: *)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ GHC.Word.Word8
+                   @ GHC.Word.Word8
+                   @~ <GHC.Word.Word8>_N) -}
+e5e8d46fb024417c1fa43a00f05f203e
+  drawPicture_go ::
+    [Tortoise.Line]
+    -> Control.Monad.Free.Church.F
+         (Graphics.Rasterific.Command.DrawCommand
+            Codec.Picture.Types.PixelRGBA8)
+         [()]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+"SPEC/TortoiseGraphics $fNumV1 @ Float" [orphan] forall (v :: GHC.Num.Num
+                                                                GHC.Types.Float)
+  Graphics.Rasterific.Linear.$fNumV1 @ GHC.Types.Float v
+  = TortoiseGraphics.$s$fNumV1
+"SPEC/TortoiseGraphics $fNumV4 @ Float" [orphan] forall (v :: GHC.Num.Num
+                                                                GHC.Types.Float)
+  Graphics.Rasterific.Linear.$fNumV4 @ GHC.Types.Float v
+  = TortoiseGraphics.$s$fNumV4
+"SPEC/TortoiseGraphics $fNumV4_$c* @ Float" [orphan] forall ($dNum :: GHC.Num.Num
+                                                                        GHC.Types.Float)
+  Graphics.Rasterific.Linear.$fNumV4_$c* @ GHC.Types.Float $dNum
+  = TortoiseGraphics.$s$fNumV4_$s$fNumV4_$c*
+"SPEC/TortoiseGraphics $fNumV4_$c+ @ Float" [orphan] forall ($dNum :: GHC.Num.Num
+                                                                        GHC.Types.Float)
+  Graphics.Rasterific.Linear.$fNumV4_$c+ @ GHC.Types.Float $dNum
+  = TortoiseGraphics.$s$fNumV4_$s$fNumV4_$c+
+"SPEC/TortoiseGraphics $fNumV4_$c- @ Float" [orphan] forall ($dNum :: GHC.Num.Num
+                                                                        GHC.Types.Float)
+  Graphics.Rasterific.Linear.$fNumV4_$c- @ GHC.Types.Float $dNum
+  = TortoiseGraphics.$s$fNumV4_$s$fNumV4_$c-
+"SPEC/TortoiseGraphics $fNumV4_$cabs @ Float" [orphan] forall ($dNum :: GHC.Num.Num
+                                                                          GHC.Types.Float)
+  Graphics.Rasterific.Linear.$fNumV4_$cabs @ GHC.Types.Float $dNum
+  = TortoiseGraphics.$s$fNumV4_$s$fNumV4_$cabs
+"SPEC/TortoiseGraphics $fNumV4_$cnegate @ Float" [orphan] forall ($dNum :: GHC.Num.Num
+                                                                             GHC.Types.Float)
+  Graphics.Rasterific.Linear.$fNumV4_$cnegate @ GHC.Types.Float $dNum
+  = TortoiseGraphics.$s$fNumV4_$s$fNumV4_$cnegate
+"SPEC/TortoiseGraphics $fNumV4_$csignum @ Float" [orphan] forall ($dNum :: GHC.Num.Num
+                                                                             GHC.Types.Float)
+  Graphics.Rasterific.Linear.$fNumV4_$csignum @ GHC.Types.Float $dNum
+  = TortoiseGraphics.$s$fNumV4_$s$fNumV4_$csignum
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

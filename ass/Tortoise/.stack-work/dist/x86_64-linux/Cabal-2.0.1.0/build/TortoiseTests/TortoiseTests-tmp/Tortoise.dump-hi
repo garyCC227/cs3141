@@ -1,0 +1,1698 @@
+
+==================== FINAL INTERFACE ====================
+2019-06-24 05:34:28.603407 UTC
+
+interface main:Tortoise 8022
+  interface hash: 1598162bf7b4be661fa8cb3ed09a5060
+  ABI hash: b1059e1036400af094eb900238a21641
+  export-list hash: 17bb42b7abb4b8f657ba026147798592
+  orphan hash: 185dc333fd6b1dbc35d454bd0bfcc326
+  flag hash: 61590a41f13c1de1f84f4cc69df78bbd
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Tortoise.black
+  Tortoise.blue
+  Tortoise.brown
+  Tortoise.comp
+  Tortoise.finalState
+  Tortoise.green
+  Tortoise.magenta
+  Tortoise.nop
+  Tortoise.orange
+  Tortoise.red
+  Tortoise.start
+  Tortoise.tortoise
+  Tortoise.tortoisePic
+  Tortoise.white
+  Tortoise.yellow
+  Tortoise.Angle
+  Tortoise.Colour{Tortoise.Colour alphaC blueC greenC redC}
+  Tortoise.Distance
+  Tortoise.Instructions{Tortoise.Move Tortoise.PenDown Tortoise.PenUp Tortoise.SetColour Tortoise.SetStyle Tortoise.Stop Tortoise.Turn}
+  Tortoise.Line{Tortoise.Line}
+  Tortoise.LineStyle{Tortoise.Dashed Tortoise.Dotted Tortoise.Solid}
+  Tortoise.LineWidth
+  Tortoise.Picture
+  Tortoise.Point
+  Tortoise.TortoiseState{Tortoise.TortoiseState colour facing penDown position style}
+module dependencies:
+package dependencies: base-4.10.1.0* ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Type.Equality base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:Data.List 4ab7fa2a1b87502b23af891a384f0506
+import  -/  base-4.10.1.0:Data.OldList 555420b092ca8cf0a8f9666bc0e07dcf
+import  -/  base-4.10.1.0:Data.Tuple 8fa1305aa5032ea35e2a54fa5f1e78f9
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Float 28e3bf9e258278ac8084e9cab43fd542
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Real 3c62834bc25e762eabc44149c4cc142d
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  integer-gmp-1.0.1.0:GHC.Integer.Type 5fa81108482c33b62ec3ac7464eece96
+d78a8b42b180e9e5e81fef69d389b64d
+  $fEqColour :: GHC.Classes.Eq Tortoise.Colour
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.Colour
+                  Tortoise.$fEqColour_$c==
+                  Tortoise.$fEqColour_$c/= -}
+d78a8b42b180e9e5e81fef69d389b64d
+  $fEqColour_$c/= ::
+    Tortoise.Colour -> Tortoise.Colour -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),1*U(U),1*U(U),1*U(U))><S(S(S)LLL),1*U(1*U(U),1*U(U),1*U(U),1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Tortoise.Colour) (b :: Tortoise.Colour) ->
+                 case Tortoise.$fEqColour_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+d78a8b42b180e9e5e81fef69d389b64d
+  $fEqColour_$c== ::
+    Tortoise.Colour -> Tortoise.Colour -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),1*U(U),1*U(U),1*U(U))><S(S(S)LLL),1*U(1*U(U),1*U(U),1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Tortoise.Colour) (w1 :: Tortoise.Colour) ->
+                 case w of ww { Tortoise.Colour ww1 ww2 ww3 ww4 ->
+                 case ww1 of ww5 { GHC.Types.I# ww6 ->
+                 case w1 of ww7 { Tortoise.Colour ww8 ww9 ww10 ww11 ->
+                 case ww8 of ww12 { GHC.Types.I# ww13 ->
+                 Tortoise.$w$c== ww6 ww2 ww3 ww4 ww13 ww9 ww10 ww11 } } } }) -}
+da54e1c72fc39648f154ea8046be7b10
+  $fEqInstructions :: GHC.Classes.Eq Tortoise.Instructions
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.Instructions
+                  Tortoise.$fEqInstructions_$c==
+                  Tortoise.$fEqInstructions_$c/= -}
+da54e1c72fc39648f154ea8046be7b10
+  $fEqInstructions_$c/= ::
+    Tortoise.Instructions -> Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Tortoise.Instructions) (b :: Tortoise.Instructions) ->
+                 case Tortoise.$fEqInstructions_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+da54e1c72fc39648f154ea8046be7b10
+  $fEqInstructions_$c== ::
+    Tortoise.Instructions -> Tortoise.Instructions -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  $fEqLine :: GHC.Classes.Eq Tortoise.Line
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.Line Tortoise.$fEqLine_$c== Tortoise.$fEqLine_$c/= -}
+fe4aca97b4772dea1441d21fc5c0f22d
+  $fEqLine1 ::
+    (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+    -> (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+    -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer))
+                   (w1 :: (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case w1 of ww3 { (,) ww4 ww5 ->
+                 Tortoise.$wlvl ww1 ww2 ww4 ww5 } }) -}
+93364e0f992801de300d62c97d8c110e
+  $fEqLine2 ::
+    (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+    -> (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+    -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer))
+                   (w1 :: (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case w1 of ww3 { (,) ww4 ww5 ->
+                 Tortoise.$wlvl1 ww1 ww2 ww4 ww5 } }) -}
+9040f192270b954aaff8da1757a91712
+  $fEqLineStyle :: GHC.Classes.Eq Tortoise.LineStyle
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.LineStyle
+                  Tortoise.$fEqLine_$c==1
+                  Tortoise.$fEqLineStyle_$c/= -}
+9040f192270b954aaff8da1757a91712
+  $fEqLineStyle_$c/= ::
+    Tortoise.LineStyle -> Tortoise.LineStyle -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Tortoise.LineStyle) (b :: Tortoise.LineStyle) ->
+                 case Tortoise.$fEqLine_$c==1 a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  $fEqLine_$c/= :: Tortoise.Line -> Tortoise.Line -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),U,U)><S(SLLL),1*U(1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),U,U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Tortoise.Line) (y :: Tortoise.Line) ->
+                 case Tortoise.$fEqLine_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  $fEqLine_$c== :: Tortoise.Line -> Tortoise.Line -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),U,U)><S(SLLL),1*U(1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),U,U)>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Tortoise.Line) (w1 :: Tortoise.Line) ->
+                 case w of ww { Tortoise.Line ww1 ww2 ww3 ww4 ->
+                 case w1 of ww5 { Tortoise.Line ww6 ww7 ww8 ww9 ->
+                 Tortoise.$w$c==1 ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }) -}
+9040f192270b954aaff8da1757a91712
+  $fEqLine_$c==1 ::
+    Tortoise.LineStyle -> Tortoise.LineStyle -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Tortoise.LineStyle)
+                   (ds1 :: Tortoise.LineStyle) ->
+                 case ds of wild {
+                   Tortoise.Solid a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Tortoise.Solid b1 -> GHC.Classes.eqInt a1 b1 }
+                   Tortoise.Dashed a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Tortoise.Dashed b1 -> GHC.Classes.eqInt a1 b1 }
+                   Tortoise.Dotted a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Tortoise.Dotted b1 -> GHC.Classes.eqInt a1 b1 } }) -}
+98f408c8078a6598234f2aa4fe82fa41
+  $fEqLine_$s$fEq(,) ::
+    GHC.Classes.Eq (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Integer.Type.Integer
+                     @ GHC.Integer.Type.Integer
+                     GHC.Integer.Type.$fEqInteger
+                     GHC.Integer.Type.$fEqInteger)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ GHC.Integer.Type.Integer
+                     @ GHC.Integer.Type.Integer
+                     GHC.Integer.Type.$fEqInteger
+                     GHC.Integer.Type.$fEqInteger) -}
+315ec7b3950551f4718cbf560be8f9b1
+  $fEqTortoiseState :: GHC.Classes.Eq Tortoise.TortoiseState
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.TortoiseState
+                  Tortoise.$fEqTortoiseState_$c==
+                  Tortoise.$fEqTortoiseState_$c/= -}
+315ec7b3950551f4718cbf560be8f9b1
+  $fEqTortoiseState_$c/= ::
+    Tortoise.TortoiseState -> Tortoise.TortoiseState -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(SL)LLLL),1*U(1*U(1*U,1*U),1*U,1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U)><S(S(SL)LLLL),1*U(1*U(1*U,1*U),1*U,1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Tortoise.TortoiseState) (b :: Tortoise.TortoiseState) ->
+                 case Tortoise.$fEqTortoiseState_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+315ec7b3950551f4718cbf560be8f9b1
+  $fEqTortoiseState_$c== ::
+    Tortoise.TortoiseState -> Tortoise.TortoiseState -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(SL)LLLL),1*U(1*U(1*U,1*U),1*U,1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U)><S(S(SL)LLLL),1*U(1*U(1*U,1*U),1*U,1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U)>,
+     Unfolding: (\ (ds :: Tortoise.TortoiseState)
+                   (ds1 :: Tortoise.TortoiseState) ->
+                 case ds of wild { Tortoise.TortoiseState a1 a2 a3 a4 a5 ->
+                 case ds1 of wild1 { Tortoise.TortoiseState b1 b2 b3 b4 b5 ->
+                 case a1 of ww { (,) ww1 ww2 ->
+                 case b1 of ww3 { (,) ww4 ww5 ->
+                 case GHC.Integer.Type.eqInteger# ww1 ww4 of wild2 { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Integer.Type.eqInteger# ww2 ww5 of wild4 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Integer.Type.eqInteger# a2 b2 of wild6 { DEFAULT ->
+                           case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild6 of wild7 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case Tortoise.$fEqLine_$c==1 a3 b3 of wild8 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> case a4 of ww7 { Tortoise.Colour ww8 ww9 ww10 ww11 ->
+                                     case ww8 of ww12 { GHC.Types.I# ww13 ->
+                                     case b4 of ww14 { Tortoise.Colour ww15 ww16 ww17 ww18 ->
+                                     case ww15 of ww19 { GHC.Types.I# ww20 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# ww13 ww20) of wild9 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True
+                                       -> case ww9 of wild10 { GHC.Types.I# x ->
+                                          case ww16 of wild11 { GHC.Types.I# y ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.==# x y) of wild12 {
+                                            GHC.Types.False -> GHC.Types.False
+                                            GHC.Types.True
+                                            -> case ww10 of wild13 { GHC.Types.I# x1 ->
+                                               case ww17 of wild14 { GHC.Types.I# y1 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.==# x1 y1) of wild15 {
+                                                 GHC.Types.False -> GHC.Types.False
+                                                 GHC.Types.True
+                                                 -> case ww11 of wild16 { GHC.Types.I# x2 ->
+                                                    case ww18 of wild17 { GHC.Types.I# y2 ->
+                                                    case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.==# x2 y2) of wild18 {
+                                                      GHC.Types.False -> GHC.Types.False
+                                                      GHC.Types.True
+                                                      -> GHC.Classes.$fEqBool_$c==
+                                                           a5
+                                                           b5 } } } } } } } } } } } } } } } } } } } } } } } } }) -}
+d78a8b42b180e9e5e81fef69d389b64d
+  $fShowColour :: GHC.Show.Show Tortoise.Colour
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.Colour
+                  Tortoise.$fShowColour_$cshowsPrec
+                  Tortoise.$fShowColour_$cshow
+                  Tortoise.$fShowColour_$cshowList -}
+d78a8b42b180e9e5e81fef69d389b64d
+  $fShowColour1 :: Tortoise.Colour -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(1*U(U),1*U(U),1*U(U),1*U(U))><L,U>,
+     Unfolding: (\ (w :: Tortoise.Colour) (w1 :: GHC.Base.String) ->
+                 case w of ww { Tortoise.Colour ww1 ww2 ww3 ww4 ->
+                 Tortoise.$w$cshowsPrec 0# ww1 ww2 ww3 ww4 w1 }) -}
+5cc63966a92bfde6e19602dad02e0f17
+  $fShowColour2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tortoise.$fShowColour3) -}
+c5d7e2f165cc0408ce61e957627939ea
+  $fShowColour3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Colour {"#) -}
+6f199d910190895f98c238da829b74e4
+  $fShowColour4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("}"#) -}
+c9d22c98b9e2c45866d7a5b18d7b3e6a
+  $fShowColour5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("alphaC = "#) -}
+ce177c704ece87dcad5ed302d1e8a253
+  $fShowColour6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("blueC = "#) -}
+060335a214f5af1707a3ed6e1149ca0c
+  $fShowColour7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("greenC = "#) -}
+b12701a5b22d17b060461e6e882ccbe3
+  $fShowColour8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("redC = "#) -}
+c088692e484b479881335632af1a72ef
+  $fShowColour9 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+d78a8b42b180e9e5e81fef69d389b64d
+  $fShowColour_$cshow :: Tortoise.Colour -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U(U),1*U(U),1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Tortoise.Colour) ->
+                 Tortoise.$fShowColour_$cshowsPrec
+                   Tortoise.$fShowColour9
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d78a8b42b180e9e5e81fef69d389b64d
+  $fShowColour_$cshowList :: [Tortoise.Colour] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Tortoise.Colour
+                   Tortoise.$fShowColour1) -}
+d78a8b42b180e9e5e81fef69d389b64d
+  $fShowColour_$cshowsPrec ::
+    GHC.Types.Int -> Tortoise.Colour -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U(U),1*U(U),1*U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Tortoise.Colour)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Tortoise.Colour ww3 ww4 ww5 ww6 ->
+                 Tortoise.$w$cshowsPrec ww1 ww3 ww4 ww5 ww6 w2 } }) -}
+da54e1c72fc39648f154ea8046be7b10
+  $fShowInstructions :: GHC.Show.Show Tortoise.Instructions
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.Instructions
+                  Tortoise.$fShowInstructions_$cshowsPrec
+                  Tortoise.$fShowInstructions_$cshow
+                  Tortoise.$fShowInstructions_$cshowList -}
+da54e1c72fc39648f154ea8046be7b10
+  $fShowInstructions1 :: Tortoise.Instructions -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Tortoise.$fShowInstructions_$cshowsPrec
+                   Tortoise.$fShowColour9) -}
+da54e1c72fc39648f154ea8046be7b10
+  $fShowInstructions_$cshow ::
+    Tortoise.Instructions -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Tortoise.Instructions) ->
+                 Tortoise.$fShowInstructions_$cshowsPrec
+                   Tortoise.$fShowColour9
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+da54e1c72fc39648f154ea8046be7b10
+  $fShowInstructions_$cshowList ::
+    [Tortoise.Instructions] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Tortoise.Instructions
+                   Tortoise.$fShowInstructions1) -}
+da54e1c72fc39648f154ea8046be7b10
+  $fShowInstructions_$cshowsPrec ::
+    GHC.Types.Int -> Tortoise.Instructions -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U> -}
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  $fShowLine :: GHC.Show.Show Tortoise.Line
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.Line
+                  Tortoise.$fShowLine_$cshowsPrec
+                  Tortoise.$fShowLine_$cshow
+                  Tortoise.$fShowLine_$cshowList -}
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  $fShowLine1 :: Tortoise.Line -> GHC.Show.ShowS
+  {- Arity: 2,
+     Strictness: <S,1*U(1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U(U,U),1*U(U,U))><L,U>,
+     Unfolding: (\ (w :: Tortoise.Line) (w1 :: GHC.Base.String) ->
+                 case w of ww { Tortoise.Line ww1 ww2 ww3 ww4 ->
+                 Tortoise.$w$cshowsPrec1 0# ww1 ww2 ww3 ww4 w1 }) -}
+83a50308fa53def74c7c2d1d52a750db
+  $fShowLine2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Dotted "#) -}
+8089f433ea532682b1e1b7a6927e2a1c
+  $fShowLine3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Dashed "#) -}
+0eaec927c8eeb2448000b6262c216e8c
+  $fShowLine4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Solid "#) -}
+e92bf6d59b56e88e6e4944f34d2ad2d8
+  $fShowLine5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Line "#) -}
+9040f192270b954aaff8da1757a91712
+  $fShowLineStyle :: GHC.Show.Show Tortoise.LineStyle
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.LineStyle
+                  Tortoise.$fShowLineStyle_$cshowsPrec
+                  Tortoise.$fShowLineStyle_$cshow
+                  Tortoise.$fShowLineStyle_$cshowList -}
+9040f192270b954aaff8da1757a91712
+  $fShowLineStyle1 :: Tortoise.LineStyle -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (w :: Tortoise.LineStyle) (w1 :: GHC.Base.String) ->
+                 Tortoise.$w$cshowsPrec2 0# w w1) -}
+9040f192270b954aaff8da1757a91712
+  $fShowLineStyle_$cshow :: Tortoise.LineStyle -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: Tortoise.LineStyle) ->
+                 case x of wild {
+                   Tortoise.Solid b1
+                   -> GHC.CString.unpackAppendCString#
+                        Tortoise.$fShowLine4
+                        (case b1 of ww2 { GHC.Types.I# ww3 ->
+                         case GHC.Show.$wshowSignedInt
+                                11#
+                                ww3
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                   Tortoise.Dashed b1
+                   -> GHC.CString.unpackAppendCString#
+                        Tortoise.$fShowLine3
+                        (case b1 of ww2 { GHC.Types.I# ww3 ->
+                         case GHC.Show.$wshowSignedInt
+                                11#
+                                ww3
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                   Tortoise.Dotted b1
+                   -> GHC.CString.unpackAppendCString#
+                        Tortoise.$fShowLine2
+                        (case b1 of ww2 { GHC.Types.I# ww3 ->
+                         case GHC.Show.$wshowSignedInt
+                                11#
+                                ww3
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Types.: @ GHC.Types.Char ww5 ww6 } }) }) -}
+9040f192270b954aaff8da1757a91712
+  $fShowLineStyle_$cshowList ::
+    [Tortoise.LineStyle] -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (GHC.Show.showList__
+                   @ Tortoise.LineStyle
+                   Tortoise.$fShowLineStyle1) -}
+9040f192270b954aaff8da1757a91712
+  $fShowLineStyle_$cshowsPrec ::
+    GHC.Types.Int -> Tortoise.LineStyle -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Tortoise.LineStyle)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Tortoise.$w$cshowsPrec2 ww1 w1 w2 }) -}
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  $fShowLine_$cshow :: Tortoise.Line -> GHC.Base.String
+  {- Arity: 1,
+     Strictness: <S,1*U(1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U(U,U),1*U(U,U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Tortoise.Line) ->
+                 Tortoise.$fShowLine_$cshowsPrec
+                   Tortoise.$fShowColour9
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  $fShowLine_$cshowList :: [Tortoise.Line] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Tortoise.Line
+                   Tortoise.$fShowLine1) -}
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  $fShowLine_$cshowsPrec ::
+    GHC.Types.Int -> Tortoise.Line -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U(U,U),1*U(U,U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Tortoise.Line)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Tortoise.Line ww3 ww4 ww5 ww6 ->
+                 Tortoise.$w$cshowsPrec1 ww1 ww3 ww4 ww5 ww6 w2 } }) -}
+315ec7b3950551f4718cbf560be8f9b1
+  $fShowTortoiseState :: GHC.Show.Show Tortoise.TortoiseState
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Tortoise.TortoiseState
+                  Tortoise.$fShowTortoiseState_$cshowsPrec
+                  Tortoise.$fShowTortoiseState_$cshow
+                  Tortoise.$fShowTortoiseState_$cshowList -}
+315ec7b3950551f4718cbf560be8f9b1
+  $fShowTortoiseState1 :: Tortoise.TortoiseState -> GHC.Show.ShowS
+  {- Arity: 2,
+     Strictness: <S,1*U(1*U(U,U),U,1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U)><L,U>,
+     Unfolding: (\ (w :: Tortoise.TortoiseState)
+                   (w1 :: GHC.Base.String) ->
+                 case w of ww { Tortoise.TortoiseState ww1 ww2 ww3 ww4 ww5 ->
+                 Tortoise.$w$cshowsPrec3 0# ww1 ww2 ww3 ww4 ww5 w1 }) -}
+315ec7b3950551f4718cbf560be8f9b1
+  $fShowTortoiseState_$cshow ::
+    Tortoise.TortoiseState -> GHC.Base.String
+  {- Arity: 1,
+     Strictness: <S,1*U(1*U(U,U),U,1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Tortoise.TortoiseState) ->
+                 Tortoise.$fShowTortoiseState_$cshowsPrec
+                   Tortoise.$fShowColour9
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+315ec7b3950551f4718cbf560be8f9b1
+  $fShowTortoiseState_$cshowList ::
+    [Tortoise.TortoiseState] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Tortoise.TortoiseState
+                   Tortoise.$fShowTortoiseState1) -}
+315ec7b3950551f4718cbf560be8f9b1
+  $fShowTortoiseState_$cshowsPrec ::
+    GHC.Types.Int -> Tortoise.TortoiseState -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U(U,U),U,1*U,1*U(1*U(U),1*U(U),1*U(U),1*U(U)),1*U)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Tortoise.TortoiseState)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Tortoise.TortoiseState ww3 ww4 ww5 ww6 ww7 ->
+                 Tortoise.$w$cshowsPrec3 ww1 ww3 ww4 ww5 ww6 ww7 w2 } }) -}
+6c3242e0f55d0ed9d9f0529f388dffa1
+  $tc'Colour :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9091494395204120379##
+                   4728472025404508923##
+                   Tortoise.$trModule
+                   Tortoise.$tc'Colour2
+                   0#
+                   Tortoise.$tc'Colour1) -}
+e50fa20b146e805e98d8276ca55c502b
+  $tc'Colour1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+655d58c532f1e0cde251e615bb68a766
+  $tc'Colour2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'Colour3) -}
+af3419ca29994a4269bd863179959c64
+  $tc'Colour3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Colour"#) -}
+1ff17889d6f5a42d06b1b5daf86e309d
+  $tc'Dashed :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   81740267534664914##
+                   8685816013864476263##
+                   Tortoise.$trModule
+                   Tortoise.$tc'Dashed2
+                   0#
+                   Tortoise.$tc'Dashed1) -}
+815b4be3c063e4aee0c27a9d63bbe860
+  $tc'Dashed1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+78901af5278f7402b22967ac773b5030
+  $tc'Dashed2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'Dashed3) -}
+042a71c0535aaa83115446a752de9893
+  $tc'Dashed3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Dashed"#) -}
+f0942fcbcbd5dc89611591bc049e35b1
+  $tc'Dotted :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10632905592076963538##
+                   2143608323732731014##
+                   Tortoise.$trModule
+                   Tortoise.$tc'Dotted1
+                   0#
+                   Tortoise.$tc'Dashed1) -}
+eec985e95b15f0e5e37cddc9105b1e56
+  $tc'Dotted1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'Dotted2) -}
+aee2faac07467eb6108082a2117a3e57
+  $tc'Dotted2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Dotted"#) -}
+d9b4b040ba95b2f16014c2c82e9a4fc1
+  $tc'Line :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5814697614500989406##
+                   1333079622954177653##
+                   Tortoise.$trModule
+                   Tortoise.$tc'Line2
+                   0#
+                   Tortoise.$tc'Line1) -}
+4f0f471f8f6110310933def1d879317c
+  $tc'Line1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+c06b423f88659bb47a38c1533104be7c
+  $tc'Line2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'Line3) -}
+a8658923e13f32e78491b8780dfe0ad2
+  $tc'Line3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Line"#) -}
+fa98d56cc9d4505b50def5d7a3981ab4
+  $tc'Move :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1614733211980069933##
+                   3303804411487913850##
+                   Tortoise.$trModule
+                   Tortoise.$tc'Move2
+                   0#
+                   Tortoise.$tc'Move1) -}
+da560e79c14eb77e24c40d1af877a15e
+  $tc'Move1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+2bbf332a384837347711436c0a3a11f3
+  $tc'Move2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'Move3) -}
+b519606b5bb1fcb9169c8ef2f134a02d
+  $tc'Move3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Move"#) -}
+716f3f0222f754c1520bca327de60425
+  $tc'PenDown :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8795035312864632037##
+                   7082608255421586271##
+                   Tortoise.$trModule
+                   Tortoise.$tc'PenDown2
+                   0#
+                   Tortoise.$tc'PenDown1) -}
+c550690761732f015aa754776c7704fc
+  $tc'PenDown1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+5513b2163aa7e8f419361a5e5954b0e0
+  $tc'PenDown2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'PenDown3) -}
+1ac006e47d354857074d64a1474de3dc
+  $tc'PenDown3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'PenDown"#) -}
+c4d87a20b05ceb769e0baa1dbe537aa5
+  $tc'PenUp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7146710445738144833##
+                   4587839695906976740##
+                   Tortoise.$trModule
+                   Tortoise.$tc'PenUp1
+                   0#
+                   Tortoise.$tc'PenDown1) -}
+1cc4b9174e7c6727a02b1be40c0a7ea1
+  $tc'PenUp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'PenUp2) -}
+f225517a8aeda95631da2913e93b6cd6
+  $tc'PenUp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'PenUp"#) -}
+f5e9a68c3ec28abf99be07a89557d585
+  $tc'SetColour :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1585023533141734186##
+                   16701333308816016100##
+                   Tortoise.$trModule
+                   Tortoise.$tc'SetColour2
+                   0#
+                   Tortoise.$tc'SetColour1) -}
+fb0c1533f50c347a792d1cf363ab1a50
+  $tc'SetColour1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+40b24ad7531a4cafb74f1b429f9dcd90
+  $tc'SetColour2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'SetColour3) -}
+3c50a064f46466c98cad192eab7fa911
+  $tc'SetColour3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'SetColour"#) -}
+4d8f9c2e3eafa15eaf1753ffd16e7ed4
+  $tc'SetStyle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12390241984476194073##
+                   12764094834281329258##
+                   Tortoise.$trModule
+                   Tortoise.$tc'SetStyle2
+                   0#
+                   Tortoise.$tc'SetStyle1) -}
+f53d0de47966838e6a7b0ec191ba1b2a
+  $tc'SetStyle1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+e98501d13b24dc88abf3b9df6dcf9851
+  $tc'SetStyle2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'SetStyle3) -}
+364182bf299d6deda04540de246aa822
+  $tc'SetStyle3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'SetStyle"#) -}
+1a6a67a8c143460a57e50c7d6e3cdc42
+  $tc'Solid :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1468691683492619673##
+                   11265195424842993143##
+                   Tortoise.$trModule
+                   Tortoise.$tc'Solid1
+                   0#
+                   Tortoise.$tc'Dashed1) -}
+2133c388ae00d8faf966f2f27e3ba107
+  $tc'Solid1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'Solid2) -}
+c1f33962fb2a41446688ecc83d731cd1
+  $tc'Solid2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Solid"#) -}
+d82bc98f693e76fadcc9de899ca78f97
+  $tc'Stop :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1302354266972088835##
+                   6466057636061614280##
+                   Tortoise.$trModule
+                   Tortoise.$tc'Stop2
+                   0#
+                   Tortoise.$tc'Stop1) -}
+54cdd0d94fb4158ead32a70ca00d8a64
+  $tc'Stop1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+95d3aaf89d43dc36fcb9b1178c89c708
+  $tc'Stop2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'Stop3) -}
+ae9a3d35d30130666ca3f291baf8576b
+  $tc'Stop3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Stop"#) -}
+aae6cf2e34bbf0e5f5fb61b71f9b2fc1
+  $tc'TortoiseState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10210392134252156578##
+                   3043643369514447897##
+                   Tortoise.$trModule
+                   Tortoise.$tc'TortoiseState2
+                   0#
+                   Tortoise.$tc'TortoiseState1) -}
+a64e290805df91ce2a697d0ca47c51e0
+  $tc'TortoiseState1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+5b538e0e81be8952a8824fda785caa9c
+  $tc'TortoiseState2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'TortoiseState3) -}
+5ba9c12f41b526ad6f32789aed12d732
+  $tc'TortoiseState3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TortoiseState"#) -}
+ca0ec4621633263df1a62fc6aff81edd
+  $tc'Turn :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3508545294719382382##
+                   1702832286376032569##
+                   Tortoise.$trModule
+                   Tortoise.$tc'Turn1
+                   0#
+                   Tortoise.$tc'Move1) -}
+fe6b0bb9450f6df48a86bc41657ce121
+  $tc'Turn1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tc'Turn2) -}
+8b9568ccc3c6ffdc254bc93d2da4fc5f
+  $tc'Turn2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Turn"#) -}
+ce8e7fc2d6b865a67c76acadbd525660
+  $tcColour :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9038042736327693521##
+                   2023720073322194839##
+                   Tortoise.$trModule
+                   Tortoise.$tcColour1
+                   0#
+                   GHC.Types.krep$*) -}
+f98ee02e26a6735f9f3b36080fb58cff
+  $tcColour1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tcColour2) -}
+ae7ccb2d43c94da2964e0032c5674a3d
+  $tcColour2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Colour"#) -}
+385fae819d746d0257690d373af1e580
+  $tcInstructions :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15754781939713024731##
+                   7864984747706702617##
+                   Tortoise.$trModule
+                   Tortoise.$tcInstructions1
+                   0#
+                   GHC.Types.krep$*) -}
+89e86951ac7a10dc4dafc9be68907c60
+  $tcInstructions1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tcInstructions2) -}
+8d2dbff24090495a1130b627705ef369
+  $tcInstructions2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Instructions"#) -}
+7fcb4a0a4e5b0702a7e42d463a7980ae
+  $tcLine :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5786102131920680103##
+                   4373766343440714513##
+                   Tortoise.$trModule
+                   Tortoise.$tcLine1
+                   0#
+                   GHC.Types.krep$*) -}
+d96dd7c42cb0a3f21d215ee0bc7c447e
+  $tcLine1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tcLine2) -}
+be33933a1c3e61ff55d1cdf2938b2856
+  $tcLine2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Line"#) -}
+ce3948a41db6095d7802702fe78ce087
+  $tcLineStyle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13960109465383883866##
+                   9679193999354008501##
+                   Tortoise.$trModule
+                   Tortoise.$tcLineStyle1
+                   0#
+                   GHC.Types.krep$*) -}
+92081d481e02cba1d01cabf9a2951e50
+  $tcLineStyle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tcLineStyle2) -}
+099e7f97b406cf5aa74fe37087f17c83
+  $tcLineStyle2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("LineStyle"#) -}
+4fdc8ccbad288deb3b9356ac8d2c4bcc
+  $tcTortoiseState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8435408400522250061##
+                   12554434699571174251##
+                   Tortoise.$trModule
+                   Tortoise.$tcTortoiseState1
+                   0#
+                   GHC.Types.krep$*) -}
+b0f60bb0132f8fbf0fbb3ccedcf01b91
+  $tcTortoiseState1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$tcTortoiseState2) -}
+5398e7e13a5dc6330f1a5c2868351166
+  $tcTortoiseState2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("TortoiseState"#) -}
+776edf3f5d0533e1874e48adb85e1dfb
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Tortoise.$trModule3
+                   Tortoise.$trModule1) -}
+1389f5f20ba28d72e8a52288811545fc
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$trModule2) -}
+214ed1dfe68c06063cf441ede8f5f228
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Tortoise"#) -}
+a1f6200be62687edcd709f0dbcdb78b7
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tortoise.$trModule4) -}
+a2c43c155882f686943d72915d168502
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+66a65511b1b17c602b8b6bbedce929c3
+  $w$c== ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><L,1*U(U)><L,1*U(U)><S,U><L,1*U(U)><L,1*U(U)><L,1*U(U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int)
+                   (ww4 :: GHC.Prim.Int#)
+                   (ww5 :: GHC.Types.Int)
+                   (ww6 :: GHC.Types.Int)
+                   (ww7 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww4) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case ww1 of wild1 { GHC.Types.I# x ->
+                      case ww5 of wild2 { GHC.Types.I# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x y) of wild3 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case ww2 of wild4 { GHC.Types.I# x1 ->
+                           case ww6 of wild5 { GHC.Types.I# y1 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x1 y1) of wild6 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.eqInt ww3 ww7 } } } } } } }) -}
+4d62dcba6538fb52b4ba395aea40f144
+  $w$c==1 ::
+    Tortoise.LineStyle
+    -> Tortoise.Colour
+    -> Tortoise.Point
+    -> Tortoise.Point
+    -> Tortoise.LineStyle
+    -> Tortoise.Colour
+    -> Tortoise.Point
+    -> Tortoise.Point
+    -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U(1*U(U),1*U(U),1*U(U),1*U(U))><L,U><L,U><S,1*U><L,1*U(1*U(U),1*U(U),1*U(U),1*U(U))><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Tortoise.LineStyle)
+                   (ww1 :: Tortoise.Colour)
+                   (ww2 :: Tortoise.Point)
+                   (ww3 :: Tortoise.Point)
+                   (ww4 :: Tortoise.LineStyle)
+                   (ww5 :: Tortoise.Colour)
+                   (ww6 :: Tortoise.Point)
+                   (ww7 :: Tortoise.Point) ->
+                 case Tortoise.$fEqLine_$c==1 ww ww4 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case ww1 of ww8 { Tortoise.Colour ww9 ww10 ww11 ww12 ->
+                      case ww9 of ww13 { GHC.Types.I# ww14 ->
+                      case ww5 of ww15 { Tortoise.Colour ww16 ww17 ww18 ww19 ->
+                      case ww16 of ww20 { GHC.Types.I# ww21 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# ww14 ww21) of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case ww10 of wild2 { GHC.Types.I# x ->
+                           case ww17 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case ww11 of wild5 { GHC.Types.I# x1 ->
+                                case ww18 of wild6 { GHC.Types.I# y1 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.==# x1 y1) of wild7 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> case ww12 of wild8 { GHC.Types.I# x2 ->
+                                     case ww19 of wild9 { GHC.Types.I# y2 ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# x2 y2) of wild10 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True
+                                       -> GHC.Classes.$fEq[]_$c==
+                                            @ (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+                                            Tortoise.$fEqLine_$s$fEq(,)
+                                            (Data.OldList.sortBy
+                                               @ Tortoise.Point
+                                               Tortoise.$fEqLine2
+                                               (GHC.Types.:
+                                                  @ Tortoise.Point
+                                                  ww2
+                                                  (GHC.Types.:
+                                                     @ Tortoise.Point
+                                                     ww3
+                                                     (GHC.Types.[] @ Tortoise.Point))))
+                                            (Data.OldList.sortBy
+                                               @ Tortoise.Point
+                                               Tortoise.$fEqLine1
+                                               (GHC.Types.:
+                                                  @ Tortoise.Point
+                                                  ww6
+                                                  (GHC.Types.:
+                                                     @ Tortoise.Point
+                                                     ww7
+                                                     (GHC.Types.[]
+                                                        @ Tortoise.Point)))) } } } } } } } } } } } } } } }) -}
+201945df04a88312032ef31c27d16ac0
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 6,
+     Strictness: <S,U><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int)
+                   (ww4 :: GHC.Types.Int)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g1 :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.CString.unpackAppendCString#
+                       Tortoise.$fShowColour8
+                       (case ww1 of ww5 { GHC.Types.I# ww6 ->
+                        case GHC.Show.$wshowSignedInt
+                               0#
+                               ww6
+                               (GHC.Base.++
+                                  @ GHC.Types.Char
+                                  GHC.Show.showCommaSpace1
+                                  (GHC.CString.unpackAppendCString#
+                                     Tortoise.$fShowColour7
+                                     (case ww2 of ww7 { GHC.Types.I# ww8 ->
+                                      case GHC.Show.$wshowSignedInt
+                                             0#
+                                             ww8
+                                             (GHC.Base.++
+                                                @ GHC.Types.Char
+                                                GHC.Show.showCommaSpace1
+                                                (GHC.CString.unpackAppendCString#
+                                                   Tortoise.$fShowColour6
+                                                   (case ww3 of ww9 { GHC.Types.I# ww10 ->
+                                                    case GHC.Show.$wshowSignedInt
+                                                           0#
+                                                           ww10
+                                                           (GHC.Base.++
+                                                              @ GHC.Types.Char
+                                                              GHC.Show.showCommaSpace1
+                                                              (GHC.CString.unpackAppendCString#
+                                                                 Tortoise.$fShowColour5
+                                                                 (case ww4 of ww11 { GHC.Types.I# ww12 ->
+                                                                  case GHC.Show.$wshowSignedInt
+                                                                         0#
+                                                                         ww12
+                                                                         (GHC.CString.unpackAppendCString#
+                                                                            Tortoise.$fShowColour4
+                                                                            x) of ww13 { (#,#) ww14 ww15 ->
+                                                                  GHC.Types.:
+                                                                    @ GHC.Types.Char
+                                                                    ww14
+                                                                    ww15 } }))) of ww11 { (#,#) ww12 ww13 ->
+                                                    GHC.Types.:
+                                                      @ GHC.Types.Char
+                                                      ww12
+                                                      ww13 } }))) of ww9 { (#,#) ww10 ww11 ->
+                                      GHC.Types.:
+                                        @ GHC.Types.Char
+                                        ww10
+                                        ww11 } }))) of ww7 { (#,#) ww8 ww9 ->
+                        GHC.Types.: @ GHC.Types.Char ww8 ww9 } })
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char Tortoise.$fShowColour2 (g1 w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Tortoise.$fShowColour2
+                           (g1 (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))) }) -}
+6326d5b3de7de03f4aa65f6f09370b7d
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> Tortoise.LineStyle
+    -> Tortoise.Colour
+    -> Tortoise.Point
+    -> Tortoise.Point
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 6,
+     Strictness: <S,U><L,1*U><L,1*U(1*U(U),1*U(U),1*U(U),1*U(U))><L,1*U(U,U)><L,1*U(U,U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Tortoise.LineStyle)
+                   (ww2 :: Tortoise.Colour)
+                   (ww3 :: Tortoise.Point)
+                   (ww4 :: Tortoise.Point)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.CString.unpackAppendCString#
+                       Tortoise.$fShowLine5
+                       (Tortoise.$w$cshowsPrec2
+                          11#
+                          ww1
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.showSpace1
+                             (case ww2 of ww5 { Tortoise.Colour ww6 ww7 ww8 ww9 ->
+                              Tortoise.$w$cshowsPrec
+                                11#
+                                ww6
+                                ww7
+                                ww8
+                                ww9
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.showSpace1
+                                   (case ww3 of ww10 { (,) ww11 ww12 ->
+                                    GHC.Types.:
+                                      @ GHC.Types.Char
+                                      GHC.Show.$fShow(,)4
+                                      (case GHC.Show.$w$cshowsPrec4
+                                              0#
+                                              ww11
+                                              (GHC.Types.:
+                                                 @ GHC.Types.Char
+                                                 GHC.Show.showList__1
+                                                 (GHC.Show.$fShow(,)_$sgo1
+                                                    (GHC.Types.:
+                                                       @ GHC.Types.Char
+                                                       GHC.Show.$fShow(,)2
+                                                       (GHC.Types.:
+                                                          @ GHC.Types.Char
+                                                          GHC.Show.showSpace1
+                                                          (case ww4 of ww13 { (,) ww14 ww15 ->
+                                                           GHC.Types.:
+                                                             @ GHC.Types.Char
+                                                             GHC.Show.$fShow(,)4
+                                                             (case GHC.Show.$w$cshowsPrec4
+                                                                     0#
+                                                                     ww14
+                                                                     (GHC.Types.:
+                                                                        @ GHC.Types.Char
+                                                                        GHC.Show.showList__1
+                                                                        (GHC.Show.$fShow(,)_$sgo1
+                                                                           (GHC.Types.:
+                                                                              @ GHC.Types.Char
+                                                                              GHC.Show.$fShow(,)2
+                                                                              x)
+                                                                           (\ (w2 :: GHC.Base.String)[OneShot] ->
+                                                                            case GHC.Show.$w$cshowsPrec4
+                                                                                   0#
+                                                                                   ww15
+                                                                                   w2 of ww16 { (#,#) ww17 ww18 ->
+                                                                            GHC.Types.:
+                                                                              @ GHC.Types.Char
+                                                                              ww17
+                                                                              ww18 })
+                                                                           (GHC.Types.[]
+                                                                              @ GHC.Show.ShowS))) of ww16 { (#,#) ww17 ww18 ->
+                                                              GHC.Types.:
+                                                                @ GHC.Types.Char
+                                                                ww17
+                                                                ww18 }) })))
+                                                    (\ (w2 :: GHC.Base.String)[OneShot] ->
+                                                     case GHC.Show.$w$cshowsPrec4
+                                                            0#
+                                                            ww12
+                                                            w2 of ww13 { (#,#) ww14 ww15 ->
+                                                     GHC.Types.: @ GHC.Types.Char ww14 ww15 })
+                                                    (GHC.Types.[]
+                                                       @ GHC.Show.ShowS))) of ww13 { (#,#) ww14 ww15 ->
+                                       GHC.Types.: @ GHC.Types.Char ww14 ww15 }) })) })))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p w
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w)) }) -}
+9040f192270b954aaff8da1757a91712
+  $w$cshowsPrec2 ::
+    GHC.Prim.Int#
+    -> Tortoise.LineStyle -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,U><S,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Tortoise.LineStyle)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Tortoise.Solid b1
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False
+                        -> GHC.CString.unpackAppendCString#
+                             Tortoise.$fShowLine4
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11# ww3 w1 of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Tortoise.$fShowLine4
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11#
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)2
+                                           w1) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) }
+                   Tortoise.Dashed b1
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False
+                        -> GHC.CString.unpackAppendCString#
+                             Tortoise.$fShowLine3
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11# ww3 w1 of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Tortoise.$fShowLine3
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11#
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)2
+                                           w1) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) }
+                   Tortoise.Dotted b1
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False
+                        -> GHC.CString.unpackAppendCString#
+                             Tortoise.$fShowLine2
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11# ww3 w1 of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Tortoise.$fShowLine2
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11#
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)2
+                                           w1) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) } }) -}
+2fb65e9057d2f7d56460a029ab560a1a
+  $w$cshowsPrec3 ::
+    GHC.Prim.Int#
+    -> Tortoise.Point
+    -> Tortoise.Angle
+    -> Tortoise.LineStyle
+    -> Tortoise.Colour
+    -> GHC.Types.Bool
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 7,
+     Strictness: <S,U><L,1*U(U,U)><L,U><L,1*U><L,1*U(1*U(U),1*U(U),1*U(U),1*U(U))><L,1*U><L,U>,
+     Inline: [0] -}
+40182133037e36e054737fc7e861b6fa
+  $wlvl ::
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Types.Ordering
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Integer.Type.Integer)
+                   (ww1 :: GHC.Integer.Type.Integer)
+                   (ww2 :: GHC.Integer.Type.Integer)
+                   (ww3 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.compareInteger ww ww2 of wild {
+                   GHC.Types.LT -> GHC.Types.LT
+                   GHC.Types.EQ -> GHC.Integer.Type.compareInteger ww1 ww3
+                   GHC.Types.GT -> GHC.Types.GT }) -}
+57df1730113a5f10e2a7c1fecf00166b
+  $wlvl1 ::
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Types.Ordering
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Integer.Type.Integer)
+                   (ww1 :: GHC.Integer.Type.Integer)
+                   (ww2 :: GHC.Integer.Type.Integer)
+                   (ww3 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.compareInteger ww ww2 of wild {
+                   GHC.Types.LT -> GHC.Types.LT
+                   GHC.Types.EQ -> GHC.Integer.Type.compareInteger ww1 ww3
+                   GHC.Types.GT -> GHC.Types.GT }) -}
+b04bb61bfc2958bf4fccb5acfcd8e863
+  $wtortoise ::
+    Tortoise.Instructions
+    -> Tortoise.TortoiseState
+    -> (# Tortoise.Picture, Tortoise.TortoiseState #)
+  {- Arity: 2, Strictness: <S,1*U><L,U(U(U,U),U,U,U,U)>,
+     Inline: [0] -}
+b4a84a790f87d8f019b67695f08c4dc9
+  type Angle = GHC.Integer.Type.Integer
+d78a8b42b180e9e5e81fef69d389b64d
+  data Colour
+    = Colour {redC :: GHC.Types.Int,
+              greenC :: GHC.Types.Int,
+              blueC :: GHC.Types.Int,
+              alphaC :: GHC.Types.Int}
+b7fa590ff6b97eb87414748743af94f0
+  type Distance = GHC.Integer.Type.Integer
+da54e1c72fc39648f154ea8046be7b10
+  data Instructions
+    = Move Tortoise.Distance Tortoise.Instructions
+    | Turn Tortoise.Angle Tortoise.Instructions
+    | SetStyle Tortoise.LineStyle Tortoise.Instructions
+    | SetColour Tortoise.Colour Tortoise.Instructions
+    | PenDown Tortoise.Instructions
+    | PenUp Tortoise.Instructions
+    | Stop
+3c4e3d13f998a45941c8dea3b0e8c8ed
+  data Line
+    = Line Tortoise.LineStyle
+           Tortoise.Colour
+           Tortoise.Point
+           Tortoise.Point
+9040f192270b954aaff8da1757a91712
+  data LineStyle
+    = Solid Tortoise.LineWidth
+    | Dashed Tortoise.LineWidth
+    | Dotted Tortoise.LineWidth
+1ce155a69f2908a877ca39fa65af5ab5
+  type LineWidth = GHC.Types.Int
+6f5b4c1ae93774f34e94f3127a2fe637
+  type Picture = [Tortoise.Line]
+68d1a3971713047b3139389081de2b37
+  type Point = (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+315ec7b3950551f4718cbf560be8f9b1
+  data TortoiseState
+    = TortoiseState {position :: Tortoise.Point,
+                     facing :: Tortoise.Angle,
+                     style :: Tortoise.LineStyle,
+                     colour :: Tortoise.Colour,
+                     penDown :: GHC.Types.Bool}
+d78a8b42b180e9e5e81fef69d389b64d
+  alphaC :: Tortoise.Colour -> GHC.Types.Int
+  RecSel Left Tortoise.Colour
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLS),1*U(A,A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.Colour) ->
+                 case ds of wild { Tortoise.Colour ds1 ds2 ds3 ds4 -> ds4 }) -}
+1d063b505f9f76e3d40ebb3cc2cae964
+  black :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.$fShowColour9
+                   Tortoise.$fShowColour9
+                   Tortoise.$fShowColour9
+                   Tortoise.black1) -}
+3cfa5bedc1b84ab3674da2b612fb255f
+  black1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 255#) -}
+decf2b32f066cdbd8f84f5c449e2c51d
+  blue :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.$fShowColour9
+                   Tortoise.$fShowColour9
+                   Tortoise.black1
+                   Tortoise.black1) -}
+d78a8b42b180e9e5e81fef69d389b64d
+  blueC :: Tortoise.Colour -> GHC.Types.Int
+  RecSel Left Tortoise.Colour
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSL),1*U(A,A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.Colour) ->
+                 case ds of wild { Tortoise.Colour ds1 ds2 ds3 ds4 -> ds3 }) -}
+103feaccc8cd73b48f6e7a0c620300c2
+  brown :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.brown3
+                   Tortoise.brown2
+                   Tortoise.brown1
+                   Tortoise.black1) -}
+84958813d13c1154c59387d341ee6368
+  brown1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 22#) -}
+503dc7b04de8823a9d8e9cb36e5f0644
+  brown2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 75#) -}
+752fca561870315ee4d3327db1a31603
+  brown3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 128#) -}
+315ec7b3950551f4718cbf560be8f9b1
+  colour :: Tortoise.TortoiseState -> Tortoise.Colour
+  RecSel Left Tortoise.TortoiseState
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSL),1*U(A,A,A,1*U(U,U,U,U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.TortoiseState) ->
+                 case ds of wild { Tortoise.TortoiseState ds1 ds2 ds3 ds4 ds5 ->
+                 ds4 }) -}
+139a2ea2a25b20ed8e28a18580c2cbe8
+  comp ::
+    (a -> (Tortoise.Picture, b))
+    -> (b -> (Tortoise.Picture, c)) -> a -> (Tortoise.Picture, c)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U(1*U,1*U))><L,1*C1(U(1*U,1*U))><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ b
+                   @ c
+                   (w :: a -> (Tortoise.Picture, b))
+                   (w1 :: b -> (Tortoise.Picture, c))
+                   (w2 :: a) ->
+                 let {
+                   ds :: (Tortoise.Picture, b) = w w2
+                 } in
+                 let {
+                   ds1 :: (Tortoise.Picture, c)
+                   = w1 (case ds of wild { (,) p b1 -> b1 })
+                 } in
+                 (case ds of wild { (,) p b1 ->
+                  GHC.Base.++
+                    @ Tortoise.Line
+                    p
+                    (case ds1 of wild1 { (,) p' c1 -> p' }) },
+                  case ds1 of wild { (,) p' c1 -> c1 })) -}
+315ec7b3950551f4718cbf560be8f9b1
+  facing :: Tortoise.TortoiseState -> Tortoise.Angle
+  RecSel Left Tortoise.TortoiseState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLLL),1*U(A,1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.TortoiseState) ->
+                 case ds of wild { Tortoise.TortoiseState ds1 ds2 ds3 ds4 ds5 ->
+                 ds2 }) -}
+893c77c4eca456ca03ab9a21f199b83d
+  finalState :: Tortoise.Instructions -> Tortoise.TortoiseState
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: Tortoise.Instructions) ->
+                 case Tortoise.tortoise i Tortoise.start of wild { (,) ds1 y ->
+                 y }) -}
+d77e600578995e83ccc99c2fb88e7a17
+  green :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.green1
+                   Tortoise.black1
+                   Tortoise.green1
+                   Tortoise.black1) -}
+6cf53a21be8fee1125ebd96a97d3c940
+  green1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
+d78a8b42b180e9e5e81fef69d389b64d
+  greenC :: Tortoise.Colour -> GHC.Types.Int
+  RecSel Left Tortoise.Colour
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLL),1*U(A,1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.Colour) ->
+                 case ds of wild { Tortoise.Colour ds1 ds2 ds3 ds4 -> ds2 }) -}
+799b3f43db3bff218121d17e0cb884df
+  magenta :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.magenta1
+                   Tortoise.$fShowColour9
+                   Tortoise.magenta1
+                   Tortoise.black1) -}
+a4201ba6f640605ba9fd4e68b796a273
+  magenta1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 153#) -}
+17af199c98798961916bc19dad91c3f3
+  nop :: a -> (Tortoise.Picture, a)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (a1 :: a) -> (GHC.Types.[] @ Tortoise.Line, a1)) -}
+b0afb7b9aebe4571bae8ad52ff3fe499
+  orange :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.orange3
+                   Tortoise.orange2
+                   Tortoise.orange1
+                   Tortoise.black1) -}
+2094735fff4500e5977335fa22302e79
+  orange1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 46#) -}
+01d379edd86c3447ef17dda734cc0554
+  orange2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 154#) -}
+406fa0c22c27d047ffe8bdf8bd91c544
+  orange3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 254#) -}
+315ec7b3950551f4718cbf560be8f9b1
+  penDown :: Tortoise.TortoiseState -> GHC.Types.Bool
+  RecSel Left Tortoise.TortoiseState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLLS),1*U(A,A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.TortoiseState) ->
+                 case ds of wild { Tortoise.TortoiseState ds1 ds2 ds3 ds4 ds5 ->
+                 ds5 }) -}
+315ec7b3950551f4718cbf560be8f9b1
+  position :: Tortoise.TortoiseState -> Tortoise.Point
+  RecSel Left Tortoise.TortoiseState
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(U,U),A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.TortoiseState) ->
+                 case ds of wild { Tortoise.TortoiseState ds1 ds2 ds3 ds4 ds5 ->
+                 ds1 }) -}
+060b84a119fb3a2fcc36a40d4023b0af
+  red :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.black1
+                   Tortoise.$fShowColour9
+                   Tortoise.$fShowColour9
+                   Tortoise.black1) -}
+d78a8b42b180e9e5e81fef69d389b64d
+  redC :: Tortoise.Colour -> GHC.Types.Int
+  RecSel Left Tortoise.Colour
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.Colour) ->
+                 case ds of wild { Tortoise.Colour ds1 ds2 ds3 ds4 -> ds1 }) -}
+87a01e15279604005c6a2ce1f506677f
+  start :: Tortoise.TortoiseState
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.TortoiseState
+                   Tortoise.start4
+                   Tortoise.start3
+                   Tortoise.start1
+                   Tortoise.white
+                   GHC.Types.True) -}
+92a0be5624bcc4a96abec3e1e8615d24
+  start1 :: Tortoise.LineStyle
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Tortoise.Solid Tortoise.start2) -}
+0e8e837d9293cbc79f33d4ebe5e66761
+  start2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+859957cb208138b435a2e00185975b3a
+  start3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+1cf0e212d7042e28652f78313769d7b9
+  start4 :: (GHC.Integer.Type.Integer, GHC.Integer.Type.Integer)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Tortoise.start3, Tortoise.start3)) -}
+315ec7b3950551f4718cbf560be8f9b1
+  style :: Tortoise.TortoiseState -> Tortoise.LineStyle
+  RecSel Left Tortoise.TortoiseState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSLL),1*U(A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tortoise.TortoiseState) ->
+                 case ds of wild { Tortoise.TortoiseState ds1 ds2 ds3 ds4 ds5 ->
+                 ds3 }) -}
+765c86f57e0db54acf0ae7d1bdc5ea8f
+  tortoise ::
+    Tortoise.Instructions
+    -> Tortoise.TortoiseState
+    -> (Tortoise.Picture, Tortoise.TortoiseState)
+  {- Arity: 2, Strictness: <S,1*U><L,U(U(U,U),U,U,U,U)>m,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Tortoise.Instructions) (w1 :: Tortoise.TortoiseState) ->
+                 case Tortoise.$wtortoise w w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+ad6091a5b5be6ed3c3b5954609f63863
+  tortoisePic :: Tortoise.Instructions -> Tortoise.Picture
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: Tortoise.Instructions) ->
+                 case Tortoise.tortoise i Tortoise.start of wild { (,) x ds1 ->
+                 x }) -}
+915994a821cec26787d7a05791bd5895
+  white :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.black1
+                   Tortoise.black1
+                   Tortoise.black1
+                   Tortoise.black1) -}
+660f41d9fb328bb4973b5d067d2d66bf
+  yellow :: Tortoise.Colour
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Tortoise.Colour
+                   Tortoise.black1
+                   Tortoise.black1
+                   Tortoise.$fShowColour9
+                   Tortoise.black1) -}
+instance [safe] GHC.Classes.Eq [Tortoise.Colour]
+  = Tortoise.$fEqColour
+instance [safe] GHC.Classes.Eq [Tortoise.Instructions]
+  = Tortoise.$fEqInstructions
+instance [safe] GHC.Classes.Eq [Tortoise.Line] = Tortoise.$fEqLine
+instance [safe] GHC.Classes.Eq [Tortoise.LineStyle]
+  = Tortoise.$fEqLineStyle
+instance [safe] GHC.Classes.Eq [Tortoise.TortoiseState]
+  = Tortoise.$fEqTortoiseState
+instance [safe] GHC.Show.Show [Tortoise.Colour]
+  = Tortoise.$fShowColour
+instance [safe] GHC.Show.Show [Tortoise.Instructions]
+  = Tortoise.$fShowInstructions
+instance [safe] GHC.Show.Show [Tortoise.Line] = Tortoise.$fShowLine
+instance [safe] GHC.Show.Show [Tortoise.LineStyle]
+  = Tortoise.$fShowLineStyle
+instance [safe] GHC.Show.Show [Tortoise.TortoiseState]
+  = Tortoise.$fShowTortoiseState
+"SPEC/Tortoise $fEq(,) @ Integer @ Integer" [orphan] forall (v1 :: GHC.Classes.Eq
+                                                                     GHC.Integer.Type.Integer)
+                                                            (v :: GHC.Classes.Eq
+                                                                    GHC.Integer.Type.Integer)
+  GHC.Classes.$fEq(,) @ GHC.Integer.Type.Integer
+                      @ GHC.Integer.Type.Integer
+                      v
+                      v1
+  = Tortoise.$fEqLine_$s$fEq(,)
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
