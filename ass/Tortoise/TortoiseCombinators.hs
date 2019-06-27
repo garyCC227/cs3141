@@ -4,10 +4,6 @@ module TortoiseCombinators
        , invisibly 
        , retrace 
        , overlay 
-       , lookUplc --TODO
-       ,checkCList
-       ,checkLList
-       ,checkPList
        ) where
 
 import Tortoise
@@ -163,7 +159,13 @@ retrace initi = retraceHelp initi Stop cs ls ps
                 (Up:pss) -> retraceHelp i (PenUp $ is) cs ls pss
 
 overlay :: [Instructions] -> Instructions
-overlay is = error "'overlay' unimplemented"
+overlay is = foldl andThen Stop (map backToStart is)
+    where
+        backToStart :: Instructions -> Instructions
+        backToStart i = i `andThen` (goBack i)
+            where 
+                goBack :: Instructions -> Instructions
+                goBack i = (invisibly . retrace) i
 
 
 
