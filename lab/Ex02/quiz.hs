@@ -91,7 +91,7 @@ mergeProp6::[Int] -> [Int] -> Bool
 mergeProp6 a b =
     sort (merge a b) == sort (a ++ b)
 -----------------------------------------------------------------------------------
---Q3:1,2,4,5
+--Q3:1,4,5
 toBinary :: Int -> String
 toBinary 0 = ""
 toBinary n = let (d,r) = n `divMod` 2
@@ -108,7 +108,7 @@ fromBinary = fst . foldr eachChar (0,1)
 binaryProp1 :: Int -> Property
 binaryProp1 i = 
     i >= 0 ==> fromBinary (toBinary i) == i
---pass
+--fail
 binaryProp2 :: String -> Property
 binaryProp2 s = 
     all (`elem` "01") s ==> toBinary (fromBinary s) == s
@@ -176,11 +176,12 @@ foo :: [a] -> (a -> b) -> [b]
 foo [] f = [] -- most correct, but die in my counter example
 foo (x:xs) f = f x : foo xs f
 
--- prop_1 :: [Int] -> Bool
--- prop_1 xs = foo xs id == xs 
+prop_1 :: [Int] -> Bool
+prop_1 xs = foo xs id == xs 
 
--- prop_2 :: [Int]->(Int -> Int) -> (Int -> Int)  -> Bool 
--- prop_2 xs f g = foo (foo xs f) g == foo xs (g . f)
+prop_2 :: [Int]->(Int -> Int) -> (Int -> Int)  -> Bool 
+prop_2 xs f g = foo (foo xs f) g == foo xs (g . f)
+-- foo [maxBound] succ
 
 --this is counterexample function
 q5::Int->Int
@@ -247,8 +248,8 @@ nuf :: [Integer] -> Integer -> [Integer]
 
 nuf xs i = scanl (\v x -> v + x) i xs 
 
-prop_1 :: [Integer] -> Integer -> Bool
-prop_1 xs x = nuf (fun (x:xs)) x == (x:xs)
+-- prop_1 :: [Integer] -> Integer -> Bool
+-- prop_1 xs x = nuf (fun (x:xs)) x == (x:xs)
 
-prop_2 :: [Integer] -> Integer -> Bool
-prop_2 xs x = fun (nuf xs x) == xs
+-- prop_2 :: [Integer] -> Integer -> Bool
+-- prop_2 xs x = fun (nuf xs x) == xs
