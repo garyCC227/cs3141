@@ -62,7 +62,7 @@ instance Monad Calc where
 -- x :: Token = Number Int | operator
 -- Calc Int :: C (\xs -> (xs, Int))
 evaluate :: [Token] -> Calc Int
-evaluate [] = C $ \_ -> Nothing
+evaluate [] = pop
 evaluate (Number i: ts) = 
   do
     push i
