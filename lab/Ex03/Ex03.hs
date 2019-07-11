@@ -106,41 +106,37 @@ prop_mysterious_1 integer = forAll searchTrees $ \tree ->
 prop_mysterious_2 = forAll searchTrees $ isSorted . mysterious
 ----------------------
 
-{-
-  - right left case: 
-      (1) right roate -> right child x:
-          - successor is its left child lx',
-          - then right child rx'' of lx' will be left child of x
-      (2) left rotate the root :
-        (1) its right child x will be succesor
-        (2) left child of x -> lx will be right child of root
-
-
-  for this function. to find the first unbalance branch
--}
 -- Note `nub` is a function that removes duplicates from a sorted list
 sortedListsWithoutDuplicates :: Gen [Integer]
 sortedListsWithoutDuplicates = fmap (nub . sort) arbitrary
 
 astonishing :: [Integer] -> BinaryTree
--- astonishing = undefined
 astonishing [] = Leaf
-astonishing xs = formVTL Leaf xs
+astonishing xs = formAVL Leaf xs
 
-formVTL :: BinaryTree -> [Integer] -> BinaryTree
-formVTL tr [x] = insert x Leaf
-formVTL tr xs = foldr insert Leaf $ (reverse' . preOrderList) xs
+-- form AVL tree(Balanced binary tree) function
+{-
+  1. since we always have a sorted list `xs` as input
+  2. we will convert `xs` into preOrder traversal order(In the binary tree) -> create the preOrder list `preOrder_xs`
+  3. reverse `preOrder_xs`. (since we must use `foldr` to match the syntax of `insert` function, sadlly we must reverse `preOrder_xs`:(!! )
+-}
+formAVL :: BinaryTree -> [Integer] -> BinaryTree
+formAVL tr [x] = insert x Leaf
+formAVL tr xs = foldr insert Leaf $ (reverse' . preOrderList) xs
 
+-- O(n) to reverse a list
 reverse' :: [Integer] -> [Integer]
 reverse' l = go l []
   where go [] a = a
         go (x:xs) a = go xs (x:a)
 
+-- convert a sorted list to preOrder traversal order list
 preOrderList :: [Integer] -> [Integer]
 preOrderList [] = []
 preOrderList [x] = [x]
 preOrderList xs = 
   let m = middleEl xs
+      -- delete the element
       xs' = delete m xs
       --split and conquer algorithm
       (ls, rs) = split xs'
@@ -148,24 +144,36 @@ preOrderList xs =
       rs' = preOrderList rs
     in (m: (merge ls' rs') )
 
+-- merge two list 
+{- For how it works
+  merge [1,3,5] [2,4,6] = [1,2,3,4,5,6]
+-}
 merge :: [Integer] -> [Integer] -> [Integer]
 merge [] xs = xs
 merge xs [] = xs
 merge (x:xs) (y:ys) = x:y:(merge xs ys)
 
--- Element in middle
+-- Find the middle element of the list
 middleEl :: [Integer] -> Integer
 middleEl s = mEl s s 
 
+-- help functions for `middleEl`
+-- basically works like take two pointer in the list. 
+-- s1 take 2 steps, s2 take 1 step. 
+-- so when s1 arrive `[]` or [x], head of s2 is the middle element
 mEl :: [Integer] ->  [Integer] -> Integer
 mEl    []    (h:s2) = h
 mEl (_:[])   (h:s2) = h
 mEl (_:_:s1) (_:s2) = mEl s1 s2
 
+--help function. how it works -> check explaination in `split`
 startSplit :: [Integer] -> Int -> ([Integer], [Integer])
 startSplit xs length = ((take length xs) , (drop length xs) )
 
 --split list to half
+{- For how it works:
+  split [1,2,3,4,5,6,7] = ([1,2,3,4], [5,6,7]) 
+-}
 split :: [Integer] -> ([Integer],[Integer])
 split [] = ([],[])
 split [x] = ([x],[]) 
@@ -196,4 +204,5 @@ isBalanced (Branch v l r) = and [ abs (height l - height r) <= 1
                                 ]
   where height Leaf = 0
         height (Branch v l r) = 1 + max (height l) (height r)
+
 
