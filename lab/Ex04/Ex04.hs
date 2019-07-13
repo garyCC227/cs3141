@@ -90,7 +90,12 @@ evaluate ts = f [] False ts
         case ops of 
           []        -> do 
             -- if isPending == True, then we dont have a operator, then return Nothing
-              C $ (\xs -> Nothing)
+              if isPending then do
+                C (\xs -> Nothing)
+              else
+                do
+                  push i
+                  f ops isPending ts
           (op:ops') ->
             do
               if isPending then do
