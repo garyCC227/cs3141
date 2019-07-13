@@ -12,7 +12,8 @@ parseToken "*" = Just (Operator (*))
 parseToken str = fmap Number (readMaybe str)
 
 tokenise :: String -> Maybe [Token]
-tokenise str = mapM parseToken ( (reverse.words) str)
+-- tokenise str = mapM parseToken ( (reverse.words) str)
+tokenise str = mapM parseToken (words str)
 
 
 newtype Calc a = C ([Int] -> Maybe ([Int], a))
@@ -62,6 +63,9 @@ instance Monad Calc where
 -- x :: Token = Number Int | operator
 -- Calc Int :: C (\xs -> (xs, Int))
 evaluate :: [Token] -> Calc Int
+{-
+  reverse postfix notation algorithm
+-}
 -- evaluate [] = pop
 -- evaluate (Number i: ts) = 
 --   do
@@ -70,51 +74,66 @@ evaluate :: [Token] -> Calc Int
 -- evaluate (t:ts) = 
 --   do
 --     evaluate ts
-evaluate ts = f [] False ts
-  where
-    f:: [(Int -> Int -> Int)] -> Bool -> [Token] -> Calc Int
-    f ops isPending [] =
-        case ops of
-          [] ->
-            do
-              pop
-          (op:ops') ->
-            do
-              operand_1 <- pop
-              operand_2 <- pop
-              push (operand_1 `op` operand_2) -- TODO
-              f ops' isPending []
+-- evaluate ts = f [] False ts
+--   where
+--     f:: [(Int -> Int -> Int)] -> Bool -> [Token] -> Calc Int
+--     f ops isPending [] =
+--         case ops of
+--           [] ->
+--             do
+--               pop
+--           (op:ops') ->
+--             do
+--               operand_1 <- pop
+--               operand_2 <- pop
+--               push (operand_1 `op` operand_2) -- TODO
+--               f ops' isPending []
 
-    f ops isPending ((Number i):ts) = 
-      do
-        case ops of 
-          []        -> do 
-            -- if isPending == True, then we dont have a operator, then return Nothing
-              if isPending then do
-                C (\xs -> Nothing)
-              else
-                do
-                  push i
-                  f ops isPending ts
-          (op:ops') ->
-            do
-              if isPending then do
-                operand <- pop
-                push (i `op` operand)
-                f ops' isPending ts
-              else 
-                do
-                  push i
-                  f (op:ops') True ts
+--     f ops isPending ((Number i):ts) = 
+--       do
+--         case ops of 
+--           []        -> do 
+--             -- if isPending == True, then we dont have a operator, then return Nothing
+--               if isPending then do
+--                 C (\xs -> Nothing)
+--               else
+--                 do
+--                   push i
+--                   f ops isPending ts
+--           (op:ops') ->
+--             do
+--               if isPending then do
+--                 operand <- pop
+--                 push (i `op` operand)
+--                 f ops' isPending ts
+--               else 
+--                 do
+--                   push i
+--                   f (op:ops') True ts
 
-    f ops isPending ((Operator op): ts) = 
-      do
-        (f (pushOP op ops) False ts)
+--     f ops isPending ((Operator op): ts) = 
+--       do
+--         (f (pushOP op ops) False ts)
 
 -- pushOp :: 
 pushOP op [] =[op]
 pushOP op xs = op:xs
 
+{-
+normal postfix notation algorithm
+-}
+evaluate ts = f ts
+  where
+    f:: [Token] -> Calc Int
+    f [] = pop
+    f (Number i: ts) = do
+      push i
+      f ts
+    f (Operator op: ts) = do
+      operand_1 <- pop
+      operand_2 <- pop
+      push (operand_2 `op` operand_1)
+      f ts
 
 calculate :: String -> Maybe Int
 calculate s = f (tokenise s)
