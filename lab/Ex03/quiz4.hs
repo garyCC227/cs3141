@@ -126,3 +126,30 @@ prop_temp_1 n = n >= 0 ==>
   toAbstract (newGraph n) == newGraphA n
 
 
+
+
+
+---------------------------------------------- quzi 6
+data NonEmptyList1 a = One a | Cons a (NonEmptyList1 a) deriving Eq
+
+instance Functor NonEmptyList1 where
+  fmap f (One x) = One (f x)
+  fmap f (Cons x xs) = Cons (f x) (fmap f xs)
+  
+-- instance Applicative NonEmptyList1 where
+--   pure x = One x
+--   One f <*> xs = fmap f xs 
+--   (Cons f fs) <*> xs = fmap f xs `append` (fs <*> xs)
+--     where
+--       append (One x) ys = Cons x ys
+--       append (Cons x xs) ys = Cons x (xs `append` ys)
+
+instance Applicative NonEmptyList1 where
+  pure x = Cons x (pure x)
+  (One f) <*> (One x) = One (f x)
+  (One f) <*> (Cons x _) = One (f x)
+  (Cons f _) <*> (One x) = One (f x)
+  (Cons f fs) <*> (Cons x xs) = Cons (f x) (fs <*> xs)
+
+prop_applicative2 :: Eq b => Fun a b -> a -> Bool
+prop_applicative2 (Fn f) x = (pure f <*> (pure :: a -> NonEmptyList1 a) x) == pure (f x)
