@@ -103,4 +103,3 @@ prop_basic (Positive n) = forAll (choose (1,n)) $ \x -> evalState (guessingGame 
 prop_optimality (Positive n) = forAll (choose (1,n)) $ \x -> evalState (guessingGame x (bound n) ai) (1,n)
   where bound n = ceiling (logBase 2 (fromIntegral n)) + 1
 
-
