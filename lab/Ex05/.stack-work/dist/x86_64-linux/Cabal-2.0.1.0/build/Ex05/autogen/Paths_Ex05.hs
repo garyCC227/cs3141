@@ -29,12 +29,12 @@ version :: Version
 version = Version [1,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/lts-10.3/8.2.2/bin"
-libdir     = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/lts-10.3/8.2.2/lib/x86_64-linux-ghc-8.2.2/Ex05-1.0-hNhM42f5T35JodMXi5z1l-Ex05"
-dynlibdir  = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/lts-10.3/8.2.2/lib/x86_64-linux-ghc-8.2.2"
-datadir    = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/lts-10.3/8.2.2/share/x86_64-linux-ghc-8.2.2/Ex05-1.0"
-libexecdir = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/lts-10.3/8.2.2/libexec/x86_64-linux-ghc-8.2.2/Ex05-1.0"
-sysconfdir = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/lts-10.3/8.2.2/etc"
+bindir     = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/110dec079987c74216c4c1a0ba6890a3055030cce51a8491fbf2e8ecaf737bf5/8.2.2/bin"
+libdir     = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/110dec079987c74216c4c1a0ba6890a3055030cce51a8491fbf2e8ecaf737bf5/8.2.2/lib/x86_64-linux-ghc-8.2.2/Ex05-1.0-BKQfgR9BrVDeol6sJDuKe-Ex05"
+dynlibdir  = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/110dec079987c74216c4c1a0ba6890a3055030cce51a8491fbf2e8ecaf737bf5/8.2.2/lib/x86_64-linux-ghc-8.2.2"
+datadir    = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/110dec079987c74216c4c1a0ba6890a3055030cce51a8491fbf2e8ecaf737bf5/8.2.2/share/x86_64-linux-ghc-8.2.2/Ex05-1.0"
+libexecdir = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/110dec079987c74216c4c1a0ba6890a3055030cce51a8491fbf2e8ecaf737bf5/8.2.2/libexec/x86_64-linux-ghc-8.2.2/Ex05-1.0"
+sysconfdir = "/home/garycc227/code/cs3141/lab/Ex05/.stack-work/install/x86_64-linux/110dec079987c74216c4c1a0ba6890a3055030cce51a8491fbf2e8ecaf737bf5/8.2.2/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "Ex05_bindir") (\_ -> return bindir)
